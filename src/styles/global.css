@@ -31,3 +31,20 @@ main {
 a {
   cursor: pointer;
 }
+
+.skill {
+  object-fit: contain;
+  max-width: 4.5rem;
+}
+
+.hero-img {
+  animation: updown 2.5s infinite alternate;
+}
+@keyframes updown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
