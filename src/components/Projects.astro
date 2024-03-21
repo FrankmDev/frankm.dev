@@ -1,0 +1,61 @@
+---
+import HTML from "../../public/Logos/HTML.webp";
+import CSS from "../../public/Logos/CSS.webp";
+import Javascript from "../../public/Logos/Javascript.webp";
+import React from "../../public/Logos/React.webp";
+import Astro from "../../public/Logos/Astro.webp";
+import Tailwind from "../../public/Logos/Tailwind.webp";
+
+const TAGS = {
+  HTML: {
+    name: "HTML",
+    class: "bg-black text-white",
+    icon: HTML,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-blue-400 text-white",
+    icon: CSS,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-yellow-500 text-black",
+    icon: Javascript,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-blue-600 text-white",
+    icon: React,
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-gray-800 text-white",
+    icon: Astro,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Riazzo Abogados",
+    description:
+      "Proyecto Freelance de una Landing Page para Riazzo y Asociados | Abogados",
+    link: "https://svgl.vercel.app/",
+    github: "https://github.com/pheralb/svgl",
+    image: "/projects/svgl.webp",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.REACT],
+  },
+  {
+    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    description:
+      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
+    link: "https://adventjs.dev",
+    image: "/projects/adventjs.webp",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.REACT],
+  },
+];
+---
