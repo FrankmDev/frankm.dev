@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 700;
+  color: #f9f9f9;
+  color-scheme: dark light;
+  overflow-x: hidden;
+  font-size: 1.2rem;
+}
+body {
+  max-width: 940px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
