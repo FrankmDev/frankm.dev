@@ -1,12 +1,42 @@
 ---
 import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
+import HeadingSecondary from "../components/HeadingSecondary.astro";
+import Section from "../components/Section.astro";
 ---
 
 <Layout title="Frank.dev">
   <div>
     <img src="./Hero-Img.webp" alt="Hero Image" width="300" height="auto" />
   </div>
-  <h1>Hi there! Im Frank!</h1>
-  <span>Frontend Developer</span>
+  <h1 class="text-5xl">Hi there! Im Frank!</h1>
+  <span class="bg-white text-main text-xl rounded-md py-1 px-2 m-3"
+    >Frontend Developer</span
+  >
+  <Section id="about">
+    <HeadingSecondary text="About" />
+    <p>
+      Praesent malesuada mi nisi, quis tempus magna venenatis ut. Suspendisse
+      tempor sem at scelerisque congue. Curabitur mollis, mi id molestie
+      finibus, metus sem sagittis nunc, euismod feugiat orci neque non lorem.
+      Aenean sollicitudin erat eu molestie tempus. Nunc ac eros elementum,
+      fermentum lacus at, pellentesque mauris. Suspendisse eros neque, interdum
+      euismod consectetur convallis, porttitor at massa. Phasellus a ultrices
+      arcu. Donec viverra, lorem in pellentesque euismod, libero justo gravida
+      nibh, non ultricies justo purus ultrices est.
+    </p>
+    <p>
+      Ut at interdum dui. Donec ut ante ex. Maecenas id ex eget nibh consequat
+      accumsan. Proin semper semper dui nec feugiat. Donec cursus neque id
+      aliquet finibus. Morbi facilisis turpis nibh, nec dictum orci dictum nec.
+      In hac habitasse platea dictumst. Maecenas mollis turpis vitae turpis
+      bibendum, vitae tristique arcu eleifend.
+    </p>
+  </Section>
+  <Section id="skills">
+    <HeadingSecondary text="Skills" />
+  </Section>
+  <Section id="projects">
+    <HeadingSecondary text="Projects" />
+  </Section>
 </Layout>

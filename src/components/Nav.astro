@@ -3,11 +3,40 @@ import ThemeIcon from "./ThemeIcon.astro";
 ---
 
 <div class="flex items-center justify-between">
-  <img src="./Logo.webp" alt="Frank's Logo" class="w-48" />
-  <nav class="flex gap-5 items-center">
-    <a href="#">Home</a>
-    <a href="#">About me</a>
-    <a href="#">Projects</a>
+  <a href="#">
+    <img src="./Logo.webp" alt="Frank's Logo" class="w-48" />
+  </a>
+  <nav class="flex gap-8 items-center">
+    <a href="#" class="nav-link">Home</a>
+    <a href="#" class="nav-link">About me</a>
+    <a href="#" class="nav-link">Projects</a>
     <ThemeIcon />
   </nav>
 </div>
+
+<style>
+  .nav-link {
+    position: relative;
+    z-index: 1;
+  }
+
+  .nav-link::before {
+    content: "";
+    width: 0;
+    height: 12px;
+    border-radius: 2px;
+    background-color: var(--main-color);
+    position: absolute;
+    z-index: -1;
+    bottom: -0.05rem;
+    left: 50%;
+    transition:
+      width 0.35s,
+      left 0.35s;
+  }
+
+  .nav-link:hover::before {
+    width: 100%;
+    left: 0;
+  }
+</style>
