@@ -1,4 +1,5 @@
 ---
+import LinkBtn from "../components/LinkBtn.astro";
 import HTML from "../../public/Logos/HTML.webp";
 import CSS from "../../public/Logos/CSS.webp";
 import Javascript from "../../public/Logos/Javascript.webp";
@@ -9,31 +10,31 @@ import Tailwind from "../../public/Logos/Tailwind.webp";
 const TAGS = {
   HTML: {
     name: "HTML",
-    class: "bg-black text-white",
+    class: "bg-[#F16529] text-white",
     icon: HTML,
   },
   CSS: {
     name: "CSS",
-    class: "bg-blue-400 text-white",
+    class: "bg-[#2D53E5] text-white",
     icon: CSS,
   },
   JAVASCRIPT: {
     name: "JavaScript",
-    class: "bg-yellow-500 text-black",
+    class: "bg-[#F7E025] text-black",
     icon: Javascript,
   },
   REACT: {
     name: "React",
-    class: "bg-blue-600 text-white",
+    class: "bg-[#1BA1CC] text-white",
     icon: React,
   },
   ASTRO: {
     name: "Astro",
-    class: "bg-gray-800 text-white",
+    class: "bg-black text-white",
     icon: Astro,
   },
   TAILWIND: {
-    name: "Tailwind CSS",
+    name: "Tailwind",
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
@@ -46,16 +47,60 @@ const PROJECTS = [
       "Proyecto Freelance de una Landing Page para Riazzo y Asociados | Abogados",
     link: "https://svgl.vercel.app/",
     github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
+    image: "/RiazzoAbogados.avif",
     tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.REACT],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "NIMBUS | Fitness Blog",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
+      "Blog Fitness dedicado a divulgar información de utilidad para aquellos que quieran empezar con un cambio físico, tanto de nutrición, entrenamiento y vida saludable.",
     link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
+    image: "/Omnifood.avif",
     tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.REACT],
   },
 ];
 ---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt="Recién llegado vs 5 años en Nueva Zelanda"
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold dark:text-gray-100">{title}</h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                  >
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && <LinkBtn href={github}>Code</LinkBtn>}
+              {link && <LinkBtn href={link}>Preview</LinkBtn>}
+            </footer>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>
