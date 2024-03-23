@@ -8,8 +8,10 @@ import Projects from "../components/Projects.astro";
 import AboutIcon from "../components/icons/AboutIcon.astro";
 import SkillsIcon from "../components/icons/SkillsIcon.astro";
 import ProjectsIcon from "../components/icons/ProjectsIcon.astro";
+import BlogIcon from "../components/icons/BlogIcon.astro";
 import CVBtn from "../components/CVBtn.astro";
 import Socials from "../components/Socials.astro";
+import Blog from "../components/Blog.astro";
 ---
 
 <Layout title="Frank.dev">
@@ -29,13 +31,12 @@ import Socials from "../components/Socials.astro";
     >
     <CVBtn />
   </div>
-
   <Section id="about">
     <SectionHeader>
       <AboutIcon />
       <HeadingSecondary text="About" />
     </SectionHeader>
-    <p>
+    <p class="text-justify">
       Mi nombre es Francisco Muñoz, aunque en redes soy Frank, en las que me
       dedico a crear contenido sobre programación. Soy estudiante del Grado
       Superior de Desarrollo de Aplicaciones Web, además de formarme mediante
@@ -43,7 +44,7 @@ import Socials from "../components/Socials.astro";
       Descubrí la programación estudiando la carrera de Ingeniería Electrónica Industrial,
       pero decidí emprender mi camino hacia el desarrollo.
     </p>
-    <p>
+    <p class="text-justify">
       Además, como guitarrista, atleta de fuerza y profesor particular, he
       desarrollado una gran capacidad de trabajo, disciplina y perseverancia, de
       las que me veo beneficiado a la hora de codear.
@@ -71,5 +72,12 @@ import Socials from "../components/Socials.astro";
       <HeadingSecondary text="Projects" />
     </SectionHeader>
     <Projects />
+  </Section>
+  <Section id="blog">
+    <SectionHeader>
+      <BlogIcon />
+      <HeadingSecondary text="Blog" />
+    </SectionHeader>
+    <Blog />
   </Section>
 </Layout>
