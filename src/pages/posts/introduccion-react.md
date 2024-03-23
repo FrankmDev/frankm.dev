@@ -1,7 +1,11 @@
 ---
+layout: ../../layouts/PostLayout.astro
 title: Tutorial de Introducción a React
 description: Aprende a construir aplicaciones web interactivas con React.
 image: https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg
+slug: "introduccion-react"
+date: 2022-07-01
+author: "Astro Learner"
 ---
 
 # Tutorial de Introducción a React

@@ -1,7 +1,11 @@
 ---
+layout: ../../layouts/PostLayout.astro
 title: Tutorial de Introducción a Python
 description: Aprende los conceptos básicos de programación utilizando Python.
 image: https://www.python.org/static/community_logos/python-logo.png
+date: 2022-07-01
+author: "Astro Learner"
+slug: "introduccion-python"
 ---
 
 # Tutorial de Introducción a Python

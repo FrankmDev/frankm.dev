@@ -1,0 +1,90 @@
+---
+import "../styles/global.css";
+const { frontmatter } = Astro.props;
+import Layout from "./Layout.astro";
+const { title, description, date, author, image } = frontmatter;
+const postDate = new Date(date);
+---
+
+<Layout>
+  <section class="post-content">
+    <header class="post-header">
+      <h1>{title}</h1>
+      <p>
+        por <a href={`/author/${author}`}>{author}</a> · {
+          postDate.toLocaleDateString("es-ES", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })
+        }
+      </p>
+    </header>
+    <div class="post-image">
+      <img src={image} alt="Imagen del post" width="800" height="400" />
+    </div>
+    <div class="post-description">
+      <p>{description}</p>
+    </div>
+    <div class="content">
+      <slot />
+    </div>
+    <aside class="sidebar"></aside>
+  </section>
+</Layout>
+
+<style>
+  .post-content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .post-header {
+    background-color: #5908cb;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .post-header h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .post-header p {
+    font-size: 1rem;
+    color: #f0f0f0;
+  }
+
+  .post-image {
+    margin-bottom: 1.5rem;
+  }
+
+  .post-image img {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .post-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .content {
+    margin-top: 2rem;
+  }
+
+  .content p {
+    color: red;
+  }
+  .sidebar {
+    background-color: #c71515;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+  }
+</style>

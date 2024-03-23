@@ -1,7 +1,11 @@
 ---
+layout: ../../layouts/PostLayout.astro
 title: Tutorial de Introducción a JavaScript
 description: Aprende los fundamentos de la programación en JavaScript.
 image: https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png
+slug: "introduccion-javascript"
+date: 2022-07-01
+author: "Astro Learner"
 ---
 
 # Tutorial de Introducción a JavaScript
