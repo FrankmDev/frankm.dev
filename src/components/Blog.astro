@@ -6,7 +6,7 @@ const allPosts = await Astro.glob("../pages/posts/*.md");
 
 <section class="flex flex-col items-center justify-center">
   <h2 class="text-2xl my-4">Recents Posts</h2>
-  <section class="grid grid-cols-3 gap-6">
+  <section class="blogGrid grid grid-cols-3 gap-6">
     {
       allPosts.map((post) => (
         <BlogCard key={post.frontmatter.slug} post={post} />
@@ -14,3 +14,13 @@ const allPosts = await Astro.glob("../pages/posts/*.md");
     }
   </section>
 </section>
+
+<style>
+  @media (767px>=width) {
+    .blogGrid {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+</style>

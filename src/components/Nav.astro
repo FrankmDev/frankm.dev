@@ -2,9 +2,9 @@
 
 ---
 
-<div class="flex items-center justify-between">
+<div class="container flex items-center justify-between">
   <a href="#">
-    <img src="./Logo.webp" alt="Frank's Logo" class="w-48" />
+    <img src="./Logo.webp" alt="Frank's Logo" class="logo w-48" />
   </a>
   <nav class="flex gap-8 items-center">
     <a href="#" class="nav-link">About</a>
@@ -38,5 +38,20 @@
   .nav-link:hover::before {
     width: 100%;
     left: 0;
+  }
+
+  @media (950px>=width) {
+    .logo {
+      width: 8rem;
+    }
+  }
+  @media (650px>=width) {
+    .container {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .logo {
+      width: 12rem;
+    }
   }
 </style>

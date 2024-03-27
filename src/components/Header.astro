@@ -2,8 +2,16 @@
 import Nav from "./Nav.astro";
 ---
 
-<header class="my-5">
-  <nav transition:persist>
+<header class="w-full mx-auto lg:max-w-4xl md:max-w-2xl my-5">
+  <nav class="flex items-center justify-center">
     <Nav />
   </nav>
 </header>
+
+<style>
+  @media (950px>=width) {
+    header {
+      padding: 0 1rem;
+    }
+  }
+</style>

@@ -2,7 +2,7 @@
 
 ---
 
-<div class="flex gap-4 items-center my-4">
+<div class="container flex gap-4 items-center my-4">
   <a href="https://github.com/FrankmDev" class="Btn">
     <div class="sign">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
@@ -103,5 +103,15 @@
 
   .Btn:active {
     transform: translate(2px, 2px);
+  }
+
+  @media (767px>=width) {
+    .container {
+      justify-content: center;
+    }
+    .Btn {
+      width: 60px;
+      height: 60px;
+    }
   }
 </style>

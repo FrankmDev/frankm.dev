@@ -9,3 +9,11 @@ const { class: className, id } = Astro.props;
 >
   <slot />
 </section>
+
+<style>
+  @media (650px>=width) {
+    .section {
+      max-width: 90vw;
+    }
+  }
+</style>
