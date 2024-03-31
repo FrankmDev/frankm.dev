@@ -1,42 +1,36 @@
 ---
 import LinkBtn from "../components/LinkBtn.astro";
-import HTML from "../../public/Logos/HTML.webp";
-import CSS from "../../public/Logos/CSS.webp";
-import Javascript from "../../public/Logos/Javascript.webp";
-import React from "../../public/Logos/React.webp";
-import Astro from "../../public/Logos/Astro.webp";
-import Tailwind from "../../public/Logos/Tailwind.webp";
 
 const TAGS = {
   HTML: {
     name: "HTML",
     class: "bg-[#F16529] text-white",
-    icon: HTML,
+    icon: "../../public/Logos/HTML.webp",
   },
   CSS: {
     name: "CSS",
     class: "bg-[#2D53E5] text-white",
-    icon: CSS,
+    icon: "../../public/Logos/CSS.webp",
   },
   JAVASCRIPT: {
     name: "JavaScript",
     class: "bg-[#F7E025] text-black",
-    icon: Javascript,
+    icon: "../../public/Logos/Javascript.webp",
   },
   REACT: {
     name: "React",
-    class: "bg-[#1BA1CC] text-white",
-    icon: React,
+    class: "bg-[#0a4051] text-white",
+    icon: "../../public/Logos/React.webp",
   },
   ASTRO: {
     name: "Astro",
     class: "bg-black text-white",
-    icon: Astro,
+    icon: "../../public/Logos/Astro.webp",
   },
   TAILWIND: {
     name: "Tailwind",
     class: "bg-[#003159] text-white",
-    icon: Tailwind,
+    icon: "../../public/Logos/Tailwind.webp",
   },
 };
 
@@ -84,6 +78,11 @@ const PROJECTS = [
                   <span
                     class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
                   >
+                    <img
+                      src={tag.icon}
+                      alt="Logo"
+                      class="size-4 object-contain"
+                    />
                     {tag.name}
                   </span>
                 </li>

@@ -1,0 +1,56 @@
+---
+import LinkBtn from "../components/LinkBtn.astro";
+
+const TAGS = {
+  HTML: {
+    name: "HTML",
+    class: "bg-[#F16529] text-white",
+    icon: "../../public/Logos/HTML.webp",
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-[#2D53E5] text-white",
+    icon: "../../public/Logos/CSS.webp",
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-[#F7E025] text-black",
+    icon: "../../public/Logos/Javascript.webp",
+  },
+  REACT: {
+    name: "React",
+    class: "bg-[#0a4051] text-white",
+    icon: "../../public/Logos/React.webp",
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-black text-white",
+    icon: "../../public/Logos/Astro.webp",
+  },
+  TAILWIND: {
+    name: "Tailwind",
+    class: "bg-[#003159] text-white",
+    icon: "../../public/Logos/Tailwind.webp",
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Riazzo Abogados",
+    link: "https://riazzo-weld.vercel.app/",
+    image: "/RiazzoAbogados.avif",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.REACT],
+  },
+  {
+    title: "NIMBUS | Fitness Blog",
+    link: "https://blog-gym.vercel.app/",
+    github: "https://github.com/FrankmDev/nimbus",
+    image: "/Omnifood.avif",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.REACT],
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16 mt-6">
+  {PROJECTS.map(({ image, title, tags, link, github }) => <div>hello</div>)}
+</div>
