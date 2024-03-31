@@ -13,10 +13,10 @@ html {
   font-family: "Onest", sans-serif;
   font-weight: 700;
   color: #f9f9f9;
-  color-scheme: dark light;
   overflow-x: hidden;
   font-size: 1.2rem;
   scroll-behavior: smooth;
+  background-color: #121212;
 }
 body {
   max-width: 940px;
