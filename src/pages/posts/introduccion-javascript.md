@@ -8,6 +8,7 @@ date: 2022-07-01
 author: "Astro Learner"
 ---
 
+<article class='post'></article>
 <h1 class="text-3xl font-bold mb-4">Tutorial de Introducción a JavaScript</h1>
 
 <p class="text-lg leading-relaxed mb-8">
@@ -60,3 +61,4 @@ Exploraremos temas como variables, tipos de datos, estructuras de control de flu
       <li>Eventos</li>
     </ul>
   </li>
+</article>

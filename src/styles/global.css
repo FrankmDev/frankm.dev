@@ -57,3 +57,7 @@ a {
     transform: translateY(20px);
   }
 }
+
+.postTitle {
+  color: red;
+}
