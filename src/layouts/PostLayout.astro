@@ -20,11 +20,11 @@ const postDate = new Date(date);
         }
       </p>
     </header>
-    <div class="post-image">
-      <img src={image} alt="Imagen del post" width="500" height="100" />
-    </div>
     <div class="post-description">
       <p>{description}</p>
+    </div>
+    <div class="post-image">
+      <img src={image} alt="Imagen del post" />
     </div>
     <div class="content">
       <slot />
@@ -42,8 +42,8 @@ const postDate = new Date(date);
   }
 
   .post-header {
-    background-color: #5908cb;
-    border-radius: 1rem;
+    border: 3px solid var(--main-color);
+    border-radius: 15px;
     padding: 1.5rem;
     text-align: center;
     margin-bottom: 2rem;
@@ -53,15 +53,20 @@ const postDate = new Date(date);
     font-size: 2.5rem;
     color: #fff;
     margin-bottom: 0.5rem;
+    font-weight: 900;
+    letter-spacing: 1px;
   }
 
   .post-header p {
     font-size: 1rem;
-    color: #f0f0f0;
+    color: var(--main-color);
+    font-style: italic;
   }
 
   .post-image {
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
   }
 
   .post-image img {

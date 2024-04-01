@@ -58,6 +58,14 @@ a {
   }
 }
 
+/* POST STYLES */
+
 .postTitle {
-  color: red;
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  color: var(--main-color);
+}
+
+.postText {
+  padding: 1rem 0;
 }
