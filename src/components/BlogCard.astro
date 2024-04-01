@@ -13,20 +13,21 @@ const truncateDescr = (description: string): string => {
     <div class="card-img-holder">
       <img src={post.frontmatter.image} alt="Blog image" />
     </div>
-    <h3 class="blog-title">{post.frontmatter.title}</h3>
-    <p class="description">
-      {truncateDescr(post.frontmatter.description)}
-    </p>
-    <span class="read-more">Leer más</span>
+    <div class="flex flex-col justify-between">
+      <h3 class="blog-title">{post.frontmatter.title}</h3>
+      <p class="description">
+        {truncateDescr(post.frontmatter.description)}
+      </p>
+      <span class="read-more">Leer más</span>
+    </div>
   </a>
 </div>
 
 <style>
   .card {
     height: 23rem;
-    background: #0e0e0e;
-    border-radius: 1.5rem;
-    padding: 0.5rem;
+    background: #101010;
+    border-radius: 15px;
     overflow: hidden;
     position: relative;
     transition: transform 0.3s ease;
@@ -47,17 +48,16 @@ const truncateDescr = (description: string): string => {
     height: 100%;
     max-height: 10rem;
     object-fit: cover;
-    border-radius: 1.5rem;
   }
 
   .blog-title {
     color: var(--main-color);
-    padding: 1rem 0 0.5rem 0;
     font-size: 1.2rem;
+    padding: 0 0.3rem;
   }
 
   .description {
-    padding: 0.7rem 0;
+    padding: 0 0.3rem;
     font-size: 0.8rem;
   }
 </style>
