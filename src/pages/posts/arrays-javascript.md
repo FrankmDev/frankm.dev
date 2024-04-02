@@ -1,11 +1,11 @@
 ---
 layout: ../../layouts/PostLayout.astro
-title: Tutorial de Introducción a Python
-description: Aprende los conceptos básicos de programación utilizando Python.
-image: https://www.python.org/static/community_logos/python-logo.png
+title: Arrays en Javascript
+description: ¿Qué son los arrays y cuáles serían los métodos principales en Javascript?
+image: /Arrays.avif
 date: 2022-07-01
 author: "Astro Learner"
-slug: "introduccion-python"
+slug: "arrays-javascript"
 ---
 
 # Tutorial de Introducción a Python

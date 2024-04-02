@@ -2,7 +2,7 @@
 layout: ../../layouts/PostLayout.astro
 title: Roadmap para Frontend
 description: ¿Cuál es la ruta que seguiría si quiero aprender desarrollo Frontend en 2024?
-image: /BannerRoadmap.avif
+image: /Roadmap.avif
 slug: "frontend-roadmap"
 date: 2024-04-02
 author: "FrankmDev"
