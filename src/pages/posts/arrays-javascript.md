@@ -8,10 +8,12 @@ author: "Astro Learner"
 slug: "arrays-javascript"
 ---
 
-# Tutorial de Introducción a Python
+<h1 class='postTitle'>¿Por dónde debería empezar?</h1>
 
-## Descripción
-
+<div class='flex gap-5 items-center'>
+    <h2 class='text-3xl font-black'>HTML</h2>
+    <img src='/Logos/HTML.webp' class='size-20 my-8'>
+</div>
 En este tutorial, exploraremos los conceptos básicos de programación utilizando Python, un lenguaje de programación versátil y popular. Aprenderemos sobre variables, tipos de datos, estructuras de control de flujo y funciones básicas. Este tutorial está diseñado para principiantes sin experiencia previa en programación, pero también puede ser útil como repaso para aquellos que desean refrescar sus conocimientos.
 
 ![Python Logo](https://www.python.org/static/community_logos/python-logo.png)
