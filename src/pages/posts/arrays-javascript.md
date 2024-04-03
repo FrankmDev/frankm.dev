@@ -16,8 +16,6 @@ slug: "arrays-javascript"
 </div>
 En este tutorial, exploraremos los conceptos básicos de programación utilizando Python, un lenguaje de programación versátil y popular. Aprenderemos sobre variables, tipos de datos, estructuras de control de flujo y funciones básicas. Este tutorial está diseñado para principiantes sin experiencia previa en programación, pero también puede ser útil como repaso para aquellos que desean refrescar sus conocimientos.
 
-![Python Logo](https://www.python.org/static/community_logos/python-logo.png)
-
 ## Contenido del Tutorial
 
 1. Introducción a Python

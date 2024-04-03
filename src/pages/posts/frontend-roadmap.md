@@ -17,6 +17,12 @@ El desarrollo web Frontend se encuentra en constante evolución, con nuevas tecn
     <img src='/Logos/HTML.webp' class='size-20 my-8'>
 </div>
 
+<Markdown>
+## Probando
+</Markdown>
+
+# Markdown
+
 Html o <i>HyperText Markup Language</i> es la habilidad base para cada desarrollador Front End. No te preocupes, no es necesario conocer todos los elementos de memoria, es necesario centrarse en su correcto uso según el tipo de datos a paginar.
 
 Aquí entra en juego el concepto de HTML semántico, un conjunto de reglas y buenas prácticas en la elección del correcto tag HTML que mejorarán también la SEO.

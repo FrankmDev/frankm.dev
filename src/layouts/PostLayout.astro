@@ -6,7 +6,7 @@ const { title, description, date, author, image } = frontmatter;
 const postDate = new Date(date);
 ---
 
-<Layout>
+<Layout {title}>
   <section class="post-content">
     <header class="post-header">
       <h1>{title}</h1>
@@ -29,7 +29,6 @@ const postDate = new Date(date);
     <div class="content">
       <slot />
     </div>
-    <aside class="sidebar"></aside>
   </section>
 </Layout>
 
@@ -78,18 +77,5 @@ const postDate = new Date(date);
   .post-description p {
     font-size: 1.1rem;
     line-height: 1.6;
-  }
-
-  .content {
-    margin-top: 2rem;
-  }
-
-  .content p {
-    color: red;
-  }
-  .sidebar {
-    background-color: var(--main-color);
-    padding: 1.5rem;
-    border-radius: 0.5rem;
   }
 </style>
