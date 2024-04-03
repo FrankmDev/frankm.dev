@@ -64,6 +64,14 @@ a {
   font-size: 1.8rem;
   margin: 1rem 0;
   color: var(--main-color);
+  font-weight: 900;
+}
+
+.postSubtitle {
+  color: #9e8ebe;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  font-weight: 900;
 }
 
 .postText {
