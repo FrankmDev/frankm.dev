@@ -8,6 +8,7 @@ date: 2024-04-02
 author: "FrankmDev"
 ---
 
+<p>&nbsp</p>
 <h1 class='postTitle'>Primero, ¿qué es el desarrollo frontend?</h1>
 El desarrollo frontend se encarga de la parte visible de un sitio web o aplicación web, es decir, todo lo que el usuario ve e interactúa. Se centra en crear interfaces de usuario atractivas, intuitivas y fáciles de usar.<p>&nbsp</p>
 
@@ -73,3 +74,12 @@ Vue por último, destaca por su curva de aprendizaje suave y amigable para desar
 
 <p>&nbsp</p>
 <h1 class='postTitle'>Consejos adicionales</h1>
+
+<ol class="list-decimal list-inside">
+    <li class="mb-2">Comienza con proyectos pequeños, como crear una página web estática, y aumenta la dificultad gradualmente.</li>
+    <li class="mb-2">Utiliza recursos como tutoriales, cursos en línea y libros, y únete a comunidades de programadores para obtener ayuda y consejos.</li>
+    <li class="mb-2">Acepta los errores como parte del proceso de aprendizaje y sigue adelante aprendiendo de ellos.</li>
+    <li class="mb-2">Sé paciente y constante, ya que aprender a programar requiere tiempo y esfuerzo.</li>
+    <li class="mb-2">Participa en hackathones o concursos de programación y construye un portafolio en línea para mostrar tus habilidades.</li>
+    <li class="mb-2">Mantente al día con las últimas tendencias en desarrollo web.</li>
+</ol>

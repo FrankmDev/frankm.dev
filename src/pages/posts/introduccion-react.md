@@ -7,10 +7,3 @@ slug: "introduccion-react"
 date: 2022-07-01
 author: "Astro Learner"
 ---
-
-<h1 class='postTitle'>¿Por dónde debería empezar?</h1>
-
-<div class='flex gap-5 items-center'>
-    <h2 class='text-3xl font-black'>HTML</h2>
-    <img src='/Logos/HTML.webp' class='size-20 my-8'>
-</div>

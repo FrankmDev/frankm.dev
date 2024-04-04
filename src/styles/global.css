@@ -61,14 +61,14 @@ a {
 /* POST STYLES */
 
 .postTitle {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin: 1rem 0;
-  color: var(--main-color);
+  color: #f0d698;
   font-weight: 900;
 }
 
 .postSubtitle {
-  color: #9e8ebe;
+  color: #b9a1d6;
   font-size: 1.5rem;
   margin: 1rem 0;
   font-weight: 900;
