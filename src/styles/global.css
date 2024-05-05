@@ -9,6 +9,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   font-family: "Onest", sans-serif;
   font-weight: 700;
@@ -18,6 +19,7 @@ html {
   scroll-behavior: smooth;
   background-color: #121212;
 }
+
 body {
   max-width: 940px;
   margin: 0 auto;
@@ -32,11 +34,13 @@ body {
     scroll-behavior: smooth;
   }
 }
+
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 a {
   cursor: pointer;
 }
@@ -49,10 +53,12 @@ a {
 .hero-img {
   animation: updown 2.5s infinite alternate;
 }
+
 @keyframes updown {
   from {
     transform: translateY(0);
   }
+
   to {
     transform: translateY(20px);
   }
@@ -70,6 +76,13 @@ a {
 .postSubtitle {
   color: #b9a1d6;
   font-size: 1.5rem;
+  margin: 1rem 0;
+  font-weight: 900;
+}
+
+.postH3 {
+  color: #b9a1d6;
+  font-size: 1.2rem;
   margin: 1rem 0;
   font-weight: 900;
 }
