@@ -47,10 +47,22 @@ El método <i>POP</i> es utilizado para eliminar el elemento al final del array.
   ```
 
 <h3 class='postH3'>Shift</h3>
-El métodos <i>SHIFT</i> elimina el primer elemento del array y devuelve ese elemento eliminado.
+El método <i>SHIFT</i> elimina el primer elemento del array y devuelve ese elemento eliminado.
 <p>&nbsp</p>
 
 ```javascript
   let fruits = ['apple', 'banana', 'orange'];
   let firstFruit = fruits.shift(); // 'apple'
   ```
+
+
+<h3 class='postH3'>IndexOf</h3>
+El método <i>INDEXOF</i> devuelve el índice del elemento que coincide con el valor especificado, contando con que losarrays en JavaScript empiezan por el índice 0.
+
+```javascript
+  let fruits = ['apple', 'banana', 'orange'];
+  let index = fruits.IndexOf('banana'); // 1
+```
+
+<h2 class='postSubtitle'>Conclusión</h2>
+Hay muchos más métodos de arrays en JavaScript, cada uno usado en un contexto distinto, por ejemplo, para recorrer unarray es muy usado el método <i>map</i> o <i>forEach</i>, muy utilizado para la generación de componentes de forma dinámica en React.
