@@ -1,0 +1,89 @@
+---
+import LinkBtn from "../components/LinkBtn.astro";
+
+
+const PROJECTS = [
+  {
+    title: "Tip Calculator",
+    description: "Calculadora de propinas en base al número de clientes",
+    link: "https://tip-calculator-rust-six.vercel.app/",
+    github: "https://github.com/FrankmDev/Tip-Calculator",
+    image:
+      "/TipCalculator.avif",
+  },
+  {
+    title: "Form Validation",
+    description: "Formulario de registro con validación de datos",
+    link: "https://form-validation-seven-psi.vercel.app/",
+    github: "https://github.com/FrankmDev/Form-Validation",
+    image:
+      "/FormValidation.avif",
+  },
+  {
+    title: "Markdown Previewer",
+    description: "Previsualizador de Markdown con live-preview",
+    link: "https://forkify-tawny-three.vercel.app/",
+    github: "https://github.com/FrankmDev/Forkify",
+    image:
+      "/MarkdownPreviewer.avif",
+  },
+];
+---
+
+<div class="flex justify-between gap-y-16 mt-6">
+  {
+    PROJECTS.map(({ image, title, description, link, github }) => (
+      <div class="card">
+        <a href={link} class="card-link" target='_blank'>
+          <div class="card-img-holder">
+            <img src={image} alt="Blog image" />
+          </div>
+          <div class="flex flex-col gap-5 px-3">
+            <h3 class="blog-title">{title}</h3>
+            <p class="description">{description}</p>
+            <LinkBtn />
+          </div>
+        </a>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .card {
+    height: 20rem;
+    width:16rem;
+    background: #101010;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card-img-holder {
+    width: 100%;
+    height: 50%;
+    position: relative;
+  }
+
+  .card-img-holder img {
+    width: 100%;
+    height: 100%;
+    max-height: 10rem;
+    object-fit: cover;
+  }
+
+  .blog-title {
+    color: var(--main-color);
+    font-size: 1.3rem;
+    margin:.5rem 0;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+</style>

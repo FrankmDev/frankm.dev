@@ -12,6 +12,7 @@ import BlogIcon from "../components/icons/BlogIcon.astro";
 import CVBtn from "../components/CVBtn.astro";
 import Socials from "../components/Socials.astro";
 import Blog from "../components/Blog.astro";
+import SmallProjects from '../components/SmallProjects.astro';
 ---
 
 <Layout title="Frank.dev">
@@ -71,6 +72,13 @@ import Blog from "../components/Blog.astro";
       <HeadingSecondary text="Projects" />
     </SectionHeader>
     <Projects />
+  </Section>
+ <Section id="small-projects">
+    <SectionHeader>
+      <ProjectsIcon />
+      <HeadingSecondary text="More Projects" />
+    </SectionHeader>
+    <SmallProjects />
   </Section>
   <Section id="blog">
     <SectionHeader>
