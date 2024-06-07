@@ -12,7 +12,6 @@ import BlogIcon from "../components/icons/BlogIcon.astro";
 import CVBtn from "../components/CVBtn.astro";
 import Socials from "../components/Socials.astro";
 import Blog from "../components/Blog.astro";
-import SmallProjects from '../components/SmallProjects.astro';
 ---
 
 <Layout title="Frank.dev">
@@ -25,9 +24,10 @@ import SmallProjects from '../components/SmallProjects.astro';
       class="hero-img"
     />
   </div>
-  <h1 class="text-5xl">Hey, soy Frank!</h1>
+  <h1 class="text-5xl animate-slide-up">Hey, soy Frank!</h1>
   <div class="flex gap-4 items-center justify-center">
-    <span class="bg-white text-main text-xl rounded-md py-1 px-2 m-3 font-black"
+    <span
+      class="bg-white text-main text-xl rounded-md py-1 px-2 m-3 font-black animate-slide-up"
       >Frontend Developer</span
     >
     <CVBtn />
@@ -73,13 +73,6 @@ import SmallProjects from '../components/SmallProjects.astro';
     </SectionHeader>
     <Projects />
   </Section>
- <Section id="small-projects">
-    <SectionHeader>
-      <ProjectsIcon />
-      <HeadingSecondary text="More Projects" />
-    </SectionHeader>
-    <SmallProjects />
-  </Section>
   <Section id="blog">
     <SectionHeader>
       <BlogIcon />
@@ -89,7 +82,20 @@ import SmallProjects from '../components/SmallProjects.astro';
   </Section>
 </Layout>
 
-<style>
+<style is:global>
+  @keyframes slide-up {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  .animate-slide-up {
+    animation: slide-up 0.75s ease-in-out;
+  }
   @media (670px>=width) {
     h1 {
       font-size: 2.5rem;
