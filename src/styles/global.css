@@ -52,6 +52,7 @@ a {
 
 .hero-img {
   animation: updown 2.5s infinite alternate;
+  filter: drop-shadow(3px 0px 10px rgba(84, 44, 165, .25));
 }
 
 @keyframes updown {

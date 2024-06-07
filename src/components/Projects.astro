@@ -1,5 +1,6 @@
 ---
 import LinkBtn from "../components/LinkBtn.astro";
+import GithubBtn from "../components/GithubBtn.astro";
 
 const TAGS = {
   HTML: {
@@ -104,7 +105,8 @@ const PROJECTS = [
 
             <div class="mt-2 text-gray-500">{description}</div>
             <footer class="flex items-end justify-start mt-4 gap-x-4">
-              {github && <LinkBtn href={github}>Code</LinkBtn>}
+              {github && <GithubBtn href={github} />}
+              <LinkBtn href={link}>Visit</LinkBtn>
             </footer>
           </div>
         </div>

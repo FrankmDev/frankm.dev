@@ -24,10 +24,10 @@ import Blog from "../components/Blog.astro";
       class="hero-img"
     />
   </div>
-  <h1 class="text-5xl text-center animate-slide-up">Hey, soy Frank!</h1>
-  <div class="flex gap-4 items-center justify-center">
+  <h1 class="text-5xl text-center animate-slide-up mb-4">Hey, soy Frank!</h1>
+  <div class="flex items-center justify-center">
     <span
-      class="bg-white text-main text-xl rounded-md py-1 px-2 m-3 font-black animate-slide-up"
+      class="span bg-white text-main text-xl rounded-md py-1 px-2 m-3 font-black animate-slide-up"
       >Frontend Developer</span
     >
     <CVBtn />
@@ -113,6 +113,11 @@ import Blog from "../components/Blog.astro";
     }
     .skill {
       margin: auto;
+    }
+  }
+  @media (width<=420px) {
+    .span {
+      font-size: 1rem;
     }
   }
 </style>
