@@ -12,6 +12,8 @@ import BlogIcon from "../components/icons/BlogIcon.astro";
 import CVBtn from "../components/CVBtn.astro";
 import Socials from "../components/Socials.astro";
 import Blog from "../components/Blog.astro";
+import ResourceIcon from "../components/icons/ResourceIcon.astro";
+import Resources from "../components/Resources.astro";
 ---
 
 <Layout title="Frank.dev">
@@ -35,9 +37,9 @@ import Blog from "../components/Blog.astro";
   <Section id="about">
     <SectionHeader>
       <AboutIcon />
-      <HeadingSecondary text="About" />
+      <HeadingSecondary text="¿Quién soy?" />
     </SectionHeader>
-    <p class="text-justify leading-7">
+    <p class="leading-7">
       Mi nombre es Francisco Muñoz, aunque en redes soy Frank, en las que me
       dedico a crear contenido sobre programación. Soy estudiante del Grado
       Superior de Desarrollo de Aplicaciones Web, además de formarme mediante
@@ -45,43 +47,63 @@ import Blog from "../components/Blog.astro";
       Descubrí la programación estudiando la carrera de Ingeniería Electrónica Industrial,
       pero decidí emprender mi camino hacia el desarrollo.
     </p>
-    <p class="text-justify">
-      Además, como guitarrista, atleta de fuerza y profesor particular, he
-      desarrollado una gran capacidad de trabajo, disciplina y perseverancia, de
-      las que me veo beneficiado a la hora de codear.
-    </p>
     <Socials />
   </Section>
   <Section id="skills">
     <SectionHeader>
       <SkillsIcon />
-      <HeadingSecondary text="Skills" />
+      <HeadingSecondary text="Stack" />
     </SectionHeader>
+
     <section class="skillsContainer flex items-center justify-between">
-      <img class="skill" src="/Logos/HTML.webp" alt="HTML Logo" />
-      <img class="skill" src="/Logos/CSS.webp" alt="CSS Logo" />
-      <img class="skill" src="/Logos/Javascript.webp" alt="Javascript Logo" />
-      <img class="skill" src="/Logos/Astro.webp" alt="Astro Logo" />
-      <img class="skill" src="/Logos/React.webp" alt="React Logo" />
-      <img class="skill" src="/Logos/Tailwind.webp" alt="Tailwind Logo" />
+      <div class="skill-item flex flex-col items-center">
+        <img class="skill" src="/Logos/HTML.webp" alt="HTML Logo" />
+        <span class="spanSkill">HTML</span>
+      </div>
+      <div class="skill-item flex flex-col items-center">
+        <img class="skill" src="/Logos/CSS.webp" alt="CSS Logo" />
+        <span class="spanSkill">CSS</span>
+      </div>
+      <div class="skill-item flex flex-col items-center">
+        <img class="skill" src="/Logos/Javascript.webp" alt="Javascript Logo" />
+        <span class="spanSkill">Javascript</span>
+      </div>
+      <div class="skill-item flex flex-col items-center">
+        <img class="skill" src="/Logos/Astro.webp" alt="Astro Logo" />
+        <span class="spanSkill">Astro</span>
+      </div>
+      <div class="skill-item flex flex-col items-center">
+        <img class="skill" src="/Logos/React.webp" alt="React Logo" />
+        <span class="spanSkill">React</span>
+      </div>
+      <div class="skill-item flex flex-col items-center">
+        <img class="skill" src="/Logos/Tailwind.webp" alt="Tailwind Logo" />
+        <span class="spanSkill">Tailwind</span>
+      </div>
     </section>
   </Section>
   <Section id="projects">
     <SectionHeader>
       <ProjectsIcon />
-      <HeadingSecondary text="Projects" />
+      <HeadingSecondary text="Proyectos" />
     </SectionHeader>
     <Projects />
   </Section>
   <Section id="blog">
     <SectionHeader>
       <BlogIcon />
-      <HeadingSecondary text="Blog" />
+      <HeadingSecondary text="Blog de desarrollo" />
     </SectionHeader>
     <Blog />
   </Section>
+  <Section id="resources">
+    <SectionHeader>
+      <ResourceIcon />
+      <HeadingSecondary text="Recursos web" />
+    </SectionHeader>
+    <Resources />
+  </Section>
 </Layout>
-
 <style is:global>
   @keyframes slide-up {
     0% {

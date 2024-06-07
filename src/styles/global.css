@@ -14,10 +14,10 @@ html {
   font-family: "Onest", sans-serif;
   font-weight: 700;
   color: #f9f9f9;
-  overflow-x: hidden;
   font-size: 1.2rem;
   scroll-behavior: smooth;
   background-color: #121212;
+  overflow-x: hidden;
 }
 
 body {
@@ -27,18 +27,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: smooth;
-  }
+  overflow-x: hidden;
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 
 a {
@@ -48,6 +44,22 @@ a {
 .skill {
   object-fit: contain;
   max-width: 4.5rem;
+  height: 4.5rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: max-content;
+}
+
+.spanSkill {
+  font-size: 1.1rem;
+  color: #f0d698;
+  font-weight: 900;
+  margin-top: 1rem;
+
 }
 
 .hero-img {
@@ -64,6 +76,13 @@ a {
     transform: translateY(30px);
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 
 /* POST STYLES */
 
