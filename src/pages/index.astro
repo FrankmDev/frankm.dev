@@ -12,8 +12,6 @@ import BlogIcon from "../components/icons/BlogIcon.astro";
 import CVBtn from "../components/CVBtn.astro";
 import Socials from "../components/Socials.astro";
 import Blog from "../components/Blog.astro";
-import ResourceIcon from "../components/icons/ResourceIcon.astro";
-import Resources from "../components/Resources.astro";
 ---
 
 <Layout title="Frank.dev">
@@ -42,12 +40,14 @@ import Resources from "../components/Resources.astro";
       <HeadingSecondary text="¿Quién soy?" />
     </SectionHeader>
     <p class="leading-7">
-      Mi nombre es Francisco Muñoz, aunque en redes soy Frank, en las que me
-      dedico a crear contenido sobre programación. Soy estudiante del Grado
-      Superior de Desarrollo de Aplicaciones Web, además de formarme mediante
-      cursos certificados.<br />
+      Mi nombre es Francisco Muñoz, aunque en redes soy Frank. Soy estudiante
+      del Grado Superior de Desarrollo de Aplicaciones Web, además de formarme
+      continuamente mediante cursos certificados.<br />
       Descubrí la programación estudiando la carrera de Ingeniería Electrónica Industrial,
       pero decidí emprender mi camino hacia el desarrollo.
+      <br />
+      También me dedico a crear contenido relacionado con la programación, para hacer
+      mas ameno el camino a los que inician.
     </p>
     <Socials />
   </Section>
@@ -71,13 +71,14 @@ import Resources from "../components/Resources.astro";
         <span class="spanSkill">Javascript</span>
       </div>
       <div class="skill-item flex flex-col items-center">
+        <img class="skill" src="/Logos/Vue.webp" alt="React Logo" />
+        <span class="spanSkill">Vue</span>
+      </div>
+      <div class="skill-item flex flex-col items-center">
         <img class="skill" src="/Logos/Astro.webp" alt="Astro Logo" />
         <span class="spanSkill">Astro</span>
       </div>
-      <div class="skill-item flex flex-col items-center">
-        <img class="skill" src="/Logos/React.webp" alt="React Logo" />
-        <span class="spanSkill">React</span>
-      </div>
+
       <div class="skill-item flex flex-col items-center">
         <img class="skill" src="/Logos/Tailwind.webp" alt="Tailwind Logo" />
         <span class="spanSkill">Tailwind</span>
@@ -97,13 +98,6 @@ import Resources from "../components/Resources.astro";
       <HeadingSecondary text="Blog de desarrollo" />
     </SectionHeader>
     <Blog />
-  </Section>
-  <Section id="resources">
-    <SectionHeader>
-      <ResourceIcon />
-      <HeadingSecondary text="Recursos web" />
-    </SectionHeader>
-    <Resources />
   </Section>
 </Layout>
 <style is:global>
