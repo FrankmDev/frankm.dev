@@ -1,0 +1,86 @@
+---
+import Layout from "../layouts/Layout.astro";
+import FreelanceIcon from "../components/icons/FreelanceIcon.astro";
+import Section from "../components/Section.astro";
+import HeadingSecondary from "../components/HeadingSecondary.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import "../styles/global.css";
+---
+
+<Layout title="Información de Freelance">
+  <Section id="freelance">
+    <SectionHeader>
+      <FreelanceIcon />
+      <HeadingSecondary text="¿Estás pensando en crear una web?" />
+    </SectionHeader>
+  </Section>
+  <section>
+    <h2>Transformando ideas en realidad</h2>
+    <p>
+      ¡Hola! Soy Francisco, un desarrollador frontend especializado en crear
+      landing pages para pequeños negocios.
+    </p>
+    <h2>¿Qué ofrezco?</h2>
+    <ul>
+      <li>
+        <span>Diseño y desarrollo: </span>Desde el diseño hasta el desarrollo,
+        todo queda en mis manos. Si tienes una idea solo tienes que
+        transmitirla.
+      </li>
+      <li>
+        <span>Responsive Design: </span>Todas mis webs están perfectamente
+        adaptadas a cualquier dispositivo, tanto escritorio como smartphones.
+      </li>
+      <li>
+        <span>Optimización de SEO: </span>Mejora tu presencia online con el
+        mejor posicionamiento web.
+      </li>
+      <li>
+        <span>Mantenimiento y soporte técnico: </span>Mantenimiento continuo
+        para asegurar el perfecto funcionamiento 24/7.
+      </li>
+    </ul>
+    <h2>Proceso de trabajo</h2>
+    <ul>
+      <li>
+        <span>Consulta inicial: </span>Tras haber contactado, discuto contigo
+        tus ideas, objetivos, necesidades y presupuestos.
+      </li>
+      <li>
+        <span>Propuesta personalizada: </span>Presento una propuesta detallada
+        con el plan de acción y presupuesto.
+      </li>
+      <li>
+        <span>Primer diseño: </span>Realizo una pequeña presentación en base a
+        las ideas transmitidas, pudiendo así modificar cualquier aspecto.
+      </li>
+      <li>
+        <span>Desarrollo y revisión: </span>Comienzo el desarrollo e incluyo una
+        posible modificación.
+      </li>
+      <li>
+        <span>Entrega: </span>Una vez finalizado el proyecto, y con la
+        aprobación, la web es lanzada a internet a través de un servicio de
+        hosting.
+      </li>
+      <li>
+        <span>Soporte: </span>Ofrezco un soporte técnico continuo para mantener
+        la web en óptimas condiciones.
+      </li>
+    </ul>
+  </section>
+</Layout>
+<style>
+  h2 {
+    @apply text-xl text-[#F0D698] my-4;
+  }
+  ul {
+    @apply list-decimal;
+  }
+  li {
+    @apply list-disc my-2;
+  }
+  span {
+    @apply italic mx-1 underline;
+  }
+</style>

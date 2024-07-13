@@ -8,53 +8,45 @@ import RightArrowIcon from "./icons/RightArrowIcon.astro";
     freelance. Mi objetivo es ayudar a pequeños negocios y emprendedores a
     mejorar la presencia online de su producto o servicio.
   </p>
-  <button class="">
-    <a href="/freelance" class="flex items-center gap-x-2 mt-4">
-      <span class="hover-underline-animation">Obtén más información</span>
+  <a href="/freelance">
+    <button class="btn flex items-center gap-x-1 mt-3">
+      <span>Obtén más información</span>
       <RightArrowIcon />
-    </a>
-  </button>
+    </button></a
+  >
 </section>
-<style scoped>
-  button {
-    border: none;
-    background: none;
-    cursor: pointer;
-  }
-  button span {
-    letter-spacing: 3px;
-    font-size: 14px;
-    padding-right: 15px;
-    text-transform: uppercase;
-  }
-  button svg {
-    transform: translateX(-5px);
-    transition: all 0.3s ease;
+
+<style>
+  svg {
+    transition: all 0.2s;
   }
   button:hover svg {
-    transform: translateX(0);
+    transform: translateX(2px);
+    scale: 1.1;
   }
-  hover-underline-animation {
+  span {
+    color: var(--main-color);
+    line-height: 2;
     position: relative;
-    color: black;
-    padding-bottom: 20px;
   }
 
-  .hover-underline-animation:after {
+  span::before {
     content: "";
-    position: absolute;
     width: 100%;
-    transform: scaleX(0);
     height: 2px;
-    bottom: 0;
-    left: 0;
+    border-radius: 2px;
     background-color: var(--main-color);
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+    position: absolute;
+    bottom: -0.1rem;
+    left: 0;
+    transition:
+      transform 0.4s,
+      opacity 0.4s;
+    opacity: 0;
   }
 
-  .cta:hover .hover-underline-animation:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+  span:hover::before {
+    transform: translateY(-0.25rem);
+    opacity: 1;
   }
 </style>
