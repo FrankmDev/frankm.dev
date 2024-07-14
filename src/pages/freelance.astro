@@ -5,9 +5,18 @@ import Section from "../components/Section.astro";
 import HeadingSecondary from "../components/HeadingSecondary.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import "../styles/global.css";
+
+import AccessibilyIcon from "../components/icons/AccesibilyIcon.astro";
+import InteractiveIcon from "../components/icons/InteractiveIcon.astro";
+import MobileIcon from "../components/icons/MobileIcon.astro";
+import PerformanceIcon from "../components/icons/MobileIcon.astro";
+import SupportIcon from "../components/icons/SupportIcon.astro";
+import SEOIcon from "../components/icons/SEOIcon.astro";
+import DesignIcon from "../components/icons/DesignIcon.astro";
+import SecureIcon from "../components/icons/SecureIcon.astro";
 ---
 
-<Layout title="Información de Freelance">
+<Layout title="">
   <Section id="freelance" class="">
     <SectionHeader>
       <FreelanceIcon />
@@ -17,24 +26,95 @@ import "../styles/global.css";
     <div
       class="grid h-full grid-cols-10 grid-rows-4 gap-4 mt-6 max-lg:w-[95%] max-md:grid-cols-2 max-md:grid-rows-5"
     >
-      <div class="glass col-span-4 row-span-3 glass container">Hola</div>
+      <div class="glass col-span-4 row-span-3 glass container">
+        <header>
+          <DesignIcon />
+          <h3>Diseño Personalizado</h3>
+        </header>
+        <p>Llevo a cabo tanto el proceso de diseño como el de desarrollo.</p>
+        <p>
+          Tras una consulta sobre cómo tiene planteado el diseño, realizo un
+          boceto conforme a sus gustos, pudiendo modificar cualquier parte.
+        </p>
+      </div>
       <div class="xl:col-span-4 col-span-3 row-span-1 glass container">
-        Hola
+        <header>
+          <AccessibilyIcon />
+          <h3>Accesibilidad</h3>
+        </header>
+        <p>
+          Cumple todos los requisitos de accesibilidad para personas con
+          cualquier tipo de discapacidad.
+        </p>
       </div>
       <div class="xl:col-span-2 col-span-3 row-span-1 glass container">
-        Hola
+        <header>
+          <SecureIcon />
+          <h3>Seguridad</h3>
+        </header>
+        <p>Protocolo de seguridad HTTPS con certificado SSL.</p>
       </div>
-      <div class="col-span-3 row-span-2 glass container">Hola</div>
-      <div class="col-span-3 row-span-2 glass container">Hola</div>
-      <div class="col-span-4 row-span-1 glass container">Hola</div>
-      <div class="col-span-6 row-span-1 glass container">Hola</div>
+      <div class="col-span-3 row-span-2 glass container">
+        <header>
+          <MobileIcon />
+          <h3>Diseño Responsivo</h3>
+        </header>
+        <p>
+          La web se adapta perfectamente a cualquier tipo de dispositivo, tanto
+          escritorio, tablets o smartphones.
+        </p>
+      </div>
+      <div class="col-span-3 row-span-2 glass container">
+        <header>
+          <PerformanceIcon />
+          <h3>Rendimiento</h3>
+        </header>
+        <p>
+          Al usar las últimas tecnologías, cada web cuenta con un rendimiento
+          máximo, para que el usuario pueda navegar sin interrupciones.
+        </p>
+      </div>
+      <div class="col-span-4 row-span-1 glass container">
+        <header>
+          <SupportIcon />
+          <h3>Soporte Técnico</h3>
+        </header>
+        <p>
+          Soporte técnico continuo para resolver cualquier problema y asegurar
+          el perfecto funcionamiento de la web.
+        </p>
+      </div>
+      <div class="col-span-6 row-span-1 glass container">
+        <header>
+          <SEOIcon />
+          <h3>Optimización SEO</h3>
+        </header>
+        <p>
+          Implemento mejoras de visibilidad para los motores de búsqueda, para
+          atraer a más tráfico.
+        </p>
+      </div>
     </div>
   </Section>
 </Layout>
 <style>
   @tailwind utilities;
+
   .container {
-    @apply min-h-[150px]  h-full glass-dark rounded-[2rem] px-3 max-md:col-auto;
+    @apply min-h-[160px] h-full glass-dark rounded-[2rem] px-3 max-md:col-auto;
+  }
+
+  p {
+    @apply text-sm text-zinc-500 text-center;
+  }
+
+  header {
+    @apply flex items-center justify-center gap-x-2 p-3;
+  }
+
+  svg,
+  h3 {
+    @apply text-main;
   }
 
   @layer utilities {
