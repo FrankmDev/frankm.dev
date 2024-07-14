@@ -9,7 +9,7 @@ import "../styles/global.css";
 import AccessibilyIcon from "../components/icons/AccesibilyIcon.astro";
 import InteractiveIcon from "../components/icons/InteractiveIcon.astro";
 import MobileIcon from "../components/icons/MobileIcon.astro";
-import PerformanceIcon from "../components/icons/MobileIcon.astro";
+import PerformanceIcon from "../components/icons/PerformanceIcon.astro";
 import SupportIcon from "../components/icons/SupportIcon.astro";
 import SEOIcon from "../components/icons/SEOIcon.astro";
 import DesignIcon from "../components/icons/DesignIcon.astro";
@@ -20,11 +20,10 @@ import SecureIcon from "../components/icons/SecureIcon.astro";
   <Section id="freelance" class="">
     <SectionHeader>
       <FreelanceIcon />
-      <HeadingSecondary text="¿Estás pensando en crear una web?" />
-    </SectionHeader>
-
+      <HeadingSecondary text="¿Estás pensando en crear una web?" /> 
+    </SectionHeader> 
     <div
-      class="grid h-full grid-cols-10 grid-rows-4 gap-4 mt-6 max-lg:w-[95%] max-md:grid-cols-2 max-md:grid-rows-5"
+      class="grid h-full grid-cols-10 grid-rows-3 gap-4 mt-6 max-lg:w-[95%] max-md:grid-cols-2 max-md:grid-rows-5 mx-auto"
     >
       <div class="glass col-span-4 row-span-3 glass container">
         <header>
@@ -39,20 +38,17 @@ import SecureIcon from "../components/icons/SecureIcon.astro";
       </div>
       <div class="xl:col-span-4 col-span-3 row-span-1 glass container">
         <header>
-          <AccessibilyIcon />
-          <h3>Accesibilidad</h3>
-        </header>
-        <p>
-          Cumple todos los requisitos de accesibilidad para personas con
-          cualquier tipo de discapacidad.
-        </p>
-      </div>
-      <div class="xl:col-span-2 col-span-3 row-span-1 glass container">
-        <header>
           <SecureIcon />
           <h3>Seguridad</h3>
         </header>
         <p>Protocolo de seguridad HTTPS con certificado SSL.</p>
+      </div>
+      <div class="xl:col-span-2 col-span-3 row-span-1 glass container">
+        <header>
+          <AccessibilyIcon />
+          <h3>Accesibilidad</h3>
+        </header>
+        <p>Cumple todos los requisitos de accesibilidad (WCAG).</p>
       </div>
       <div class="col-span-3 row-span-2 glass container">
         <header>
@@ -71,7 +67,8 @@ import SecureIcon from "../components/icons/SecureIcon.astro";
         </header>
         <p>
           Al usar las últimas tecnologías, cada web cuenta con un rendimiento
-          máximo, para que el usuario pueda navegar sin interrupciones.
+          máximo, para que el usuario pueda navegar sin interrupciones y
+          ofreciendo la mejor experiencia.
         </p>
       </div>
       <div class="col-span-4 row-span-1 glass container">
@@ -90,26 +87,29 @@ import SecureIcon from "../components/icons/SecureIcon.astro";
           <h3>Optimización SEO</h3>
         </header>
         <p>
-          Implemento mejoras de visibilidad para los motores de búsqueda, para
-          atraer a más tráfico.
+          Implementación de mejoras de visibilidad para los motores de búsqueda,
+          para atraer a más tráfico orgánico.
         </p>
       </div>
     </div>
+    <footer class='mt-9'>
+      <h5>¿Listo para llevar tu presencia en línea al siguiente nivel? ¡Contáctame hoy mismo para discutir tu proyecto!</p>
+    </footer>
   </Section>
 </Layout>
 <style>
   @tailwind utilities;
 
   .container {
-    @apply min-h-[160px] h-full glass-dark rounded-[2rem] px-3 max-md:col-auto;
+    @apply min-h-[150px] h-full glass-dark rounded-[2rem] px-3 max-md:col-auto;
   }
 
   p {
-    @apply text-sm text-zinc-500 text-center;
+    @apply text-sm text-zinc-400 text-center;
   }
 
   header {
-    @apply flex items-center justify-center gap-x-2 p-3;
+    @apply flex items-center justify-center gap-x-2 py-3;
   }
 
   svg,
@@ -122,12 +122,12 @@ import SecureIcon from "../components/icons/SecureIcon.astro";
       background: #010101;
       background: radial-gradient(
         circle,
-        rgba(1, 1, 1, 0.1) 0%,
+        rgba(5, 5, 5, 0.1) 0%,
         rgba(8, 8, 8, 0.1) 95%
       );
 
       -webkit-backdrop-filter: blur(10px);
-      outline: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
   }
 </style>

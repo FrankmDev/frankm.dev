@@ -2,6 +2,7 @@
 
 :root {
   --main-color: #542ca5;
+  --secondary-color: #F0D698;
 }
 
 * {
@@ -111,6 +112,7 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
