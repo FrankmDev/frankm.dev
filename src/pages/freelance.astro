@@ -61,12 +61,12 @@ import SecureIcon from "../components/icons/SecureIcon.astro";
           escritorio, tablets o smartphones.
         </p>
       </div>
-      <div class="col-span-3 row-span-2 glass container">
-        <header>
+      <div class="col-span-3 row-span-2 glass container flex flex-col">
+        <header class="">
           <PerformanceIcon />
           <h3>Rendimiento</h3>
         </header>
-        <p>
+        <p class="">
           Al usar las últimas tecnologías, cada web cuenta con un rendimiento
           máximo, para que el usuario pueda navegar sin interrupciones y
           ofreciendo la mejor experiencia.
@@ -106,7 +106,7 @@ import SecureIcon from "../components/icons/SecureIcon.astro";
   @tailwind utilities;
 
   .container {
-    @apply min-h-[150px] flex flex-col  h-full glass-dark rounded-[2rem] px-3 max-md:col-auto;
+    @apply min-h-[150px] flex flex-col h-full glass-dark rounded-[2rem] px-3 max-md:col-auto relative;
   }
 
   p {
