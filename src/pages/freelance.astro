@@ -5,6 +5,7 @@ import Section from "../components/Section.astro";
 import HeadingSecondary from "../components/HeadingSecondary.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import "../styles/global.css";
+import Socials from "../components/Socials.astro";
 
 import AccessibilyIcon from "../components/icons/AccesibilyIcon.astro";
 import InteractiveIcon from "../components/icons/InteractiveIcon.astro";
@@ -20,8 +21,8 @@ import SecureIcon from "../components/icons/SecureIcon.astro";
   <Section id="freelance" class="">
     <SectionHeader>
       <FreelanceIcon />
-      <HeadingSecondary text="¿Estás pensando en crear una web?" /> 
-    </SectionHeader> 
+      <HeadingSecondary text="¿Estás pensando en crear una web?" />
+    </SectionHeader>
     <div
       class="grid h-full grid-cols-10 grid-rows-3 gap-4 mt-6 max-lg:w-[95%] max-md:grid-cols-2 max-md:grid-rows-5 mx-auto"
     >
@@ -92,8 +93,12 @@ import SecureIcon from "../components/icons/SecureIcon.astro";
         </p>
       </div>
     </div>
-    <footer class='mt-9'>
-      <h5>¿Listo para llevar tu presencia en línea al siguiente nivel? ¡Contáctame hoy mismo para discutir tu proyecto!</p>
+    <footer class="mt-9">
+      <h5>
+        ¿Listo para llevar tu presencia en línea al siguiente nivel? ¡Contáctame
+        hoy mismo para discutir tu proyecto!
+      </h5>
+      <Socials />
     </footer>
   </Section>
 </Layout>
@@ -101,7 +106,7 @@ import SecureIcon from "../components/icons/SecureIcon.astro";
   @tailwind utilities;
 
   .container {
-    @apply min-h-[150px] h-full glass-dark rounded-[2rem] px-3 max-md:col-auto;
+    @apply min-h-[150px] flex flex-col  h-full glass-dark rounded-[2rem] px-3 max-md:col-auto;
   }
 
   p {
