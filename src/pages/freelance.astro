@@ -8,7 +8,6 @@ import "../styles/global.css";
 import Socials from "../components/Socials.astro";
 
 import AccessibilyIcon from "../components/icons/AccesibilyIcon.astro";
-import InteractiveIcon from "../components/icons/InteractiveIcon.astro";
 import MobileIcon from "../components/icons/MobileIcon.astro";
 import PerformanceIcon from "../components/icons/PerformanceIcon.astro";
 import SupportIcon from "../components/icons/SupportIcon.astro";
@@ -20,21 +19,24 @@ import SecureIcon from "../components/icons/SecureIcon.astro";
 <Layout title="">
   <Section id="freelance" class="">
     <SectionHeader>
-      <FreelanceIcon />
-      <HeadingSecondary text="¿Estás pensando en crear una web?" />
+      <div class="flex items-center gap-x-2">
+        <FreelanceIcon />
+        <HeadingSecondary text="¿Estás pensando en crear una web?" />
+      </div>
     </SectionHeader>
     <div
-      class="grid h-full grid-cols-10 grid-rows-3 gap-4 mt-6 max-lg:w-[95%] max-md:grid-cols-2 max-md:grid-rows-5 mx-auto"
+      class="grid mx-auto h-full w-[90%] grid-cols-10 grid-rows-4 gap-4 max-lg:w-[95%] max-md:grid-cols-2 max-md:grid-rows-5 max-sm:grid-cols-1"
     >
       <div class="glass col-span-4 row-span-3 glass container">
         <header>
           <DesignIcon />
           <h3>Diseño Personalizado</h3>
         </header>
-        <p>Llevo a cabo tanto el proceso de diseño como el de desarrollo.</p>
         <p>
-          Tras una consulta sobre cómo tiene planteado el diseño, realizo un
-          boceto conforme a sus gustos, pudiendo modificar cualquier parte.
+          Llevo a cabo tanto el proceso de diseño como el de desarrollo. Tras
+          una consulta sobre cómo tiene pensado el diseño de la interfaz,
+          realizo un boceto conforme a sus gustos, pudiendo modificar cualquier
+          parte.
         </p>
       </div>
       <div class="xl:col-span-4 col-span-3 row-span-1 glass container">
@@ -110,11 +112,11 @@ import SecureIcon from "../components/icons/SecureIcon.astro";
   }
 
   p {
-    @apply text-sm text-zinc-400 text-center;
+    @apply text-sm text-zinc-400 text-center my-auto;
   }
 
   header {
-    @apply flex items-center justify-center gap-x-2 py-3;
+    @apply flex items-center justify-center gap-x-2 pt-3 -mb-3;
   }
 
   svg,
