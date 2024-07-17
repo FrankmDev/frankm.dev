@@ -19,13 +19,13 @@ import SecureIcon from "../components/icons/SecureIcon.astro";
 <Layout title="">
   <Section id="freelance" class="">
     <SectionHeader>
-      <div class="flex items-center gap-x-2">
+      <div class="flex items-center mx-auto gap-x-4 max-sm:flex-col">
         <FreelanceIcon />
         <HeadingSecondary text="¿Estás pensando en crear una web?" />
       </div>
     </SectionHeader>
-    <div
-      class="grid mx-auto h-full w-[90%] grid-cols-10 grid-rows-4 gap-4 max-lg:w-[95%] max-md:grid-cols-2 max-md:grid-rows-5 max-sm:grid-cols-1"
+    <section
+      class="grid mx-auto mt-6 h-full w-[90%] grid-cols-10 grid-rows-4 gap-4 max-lg:w-[95%] max-md:grid-cols-2 max-md:grid-rows-5 max-sm:grid-cols-1"
     >
       <div class="glass col-span-4 row-span-2 glass container">
         <header>
@@ -64,7 +64,7 @@ import SecureIcon from "../components/icons/SecureIcon.astro";
           escritorio, tablets o smartphones.
         </p>
       </div>
-      <div class="col-span-3 row-span-2 glass container flex flex-col">
+      <div class="col-span-3 row-span-2 glass container">
         <header class="">
           <SupportIcon />
           <h3>Soporte técnico</h3>
@@ -79,7 +79,7 @@ import SecureIcon from "../components/icons/SecureIcon.astro";
           <PerformanceIcon />
           <h3>Rendimiento</h3>
         </header>
-        <p>
+        <p class="px-1">
           Al usar las últimas tecnologías, cada web cuenta con un rendimiento
           máximo, para que el usuario pueda navegar sin interrupciones y
           ofreciendo la mejor experiencia.
@@ -95,11 +95,13 @@ import SecureIcon from "../components/icons/SecureIcon.astro";
           para atraer a más tráfico orgánico.
         </p>
       </div>
-    </div>
-    <footer class="mt-9">
-      <h5>
+    </section>
+    <footer
+      class="mt-9 flex flex-col items-center justify-center mx-auto w-[90%] max-sm:w-[95%]"
+    >
+      <h5 class="max-sm:text-[.9rem]">
         ¿Listo para llevar tu presencia en línea al siguiente nivel? ¡Contáctame
-        hoy mismo para discutir tu proyecto!
+        hoy mismo para comenzar tu proyecto!
       </h5>
       <Socials />
     </footer>
@@ -113,7 +115,7 @@ import SecureIcon from "../components/icons/SecureIcon.astro";
   }
 
   p {
-    @apply text-sm text-zinc-400 text-center my-auto;
+    @apply text-sm text-zinc-400 text-center my-auto max-md:text-[.75rem] max-sm:text-sm;
   }
 
   header {
@@ -122,7 +124,7 @@ import SecureIcon from "../components/icons/SecureIcon.astro";
 
   svg,
   h3 {
-    @apply text-main;
+    @apply text-main max-sm:text-[.9rem];
   }
 
   @layer utilities {
