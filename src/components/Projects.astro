@@ -90,7 +90,7 @@ const PROJECTS = [
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
       <article class="flex flex-col space-x-0 space-y-8 group ">
         <div class="w-full ">
-          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-2xl group-hover:-translate-y-1 group-hover:shadow-2xl hover:border-gray-800">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-3xl group-hover:-translate-y-1 group-hover:shadow-2xl hover:border-gray-800">
             <a href={link} target="_blank">
               <img
                 alt="Project Image"
@@ -108,7 +108,7 @@ const PROJECTS = [
               {tags.map((tag) => (
                 <li>
                   <span
-                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                    class={`flex gap-x-2 rounded-full text-xs  ${tag.class} py-1 px-2 `}
                   >
                     <img
                       src={tag.icon}

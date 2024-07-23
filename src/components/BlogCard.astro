@@ -11,7 +11,7 @@ const truncateDescr = (description: string): string => {
 <div class="card">
   <a href={`/posts/${post.frontmatter.slug}`} class="card-link">
     <div class="card-img-holder">
-      <img src={post.frontmatter.image} alt="Blog image" class="rounded-2xl" />
+      <img src={post.frontmatter.image} alt="Blog image" class="rounded-3xl" />
     </div>
     <div class="flex flex-col gap-5 px-3 mt-3">
       <h3 class="blog-title">{post.frontmatter.title}</h3>
@@ -48,7 +48,7 @@ const truncateDescr = (description: string): string => {
 <style>
   .card {
     height: max-content;
-    border-radius: 15px;
+    border-radius: 24px;
     overflow: hidden;
     position: relative;
     transition: transform 0.3s ease;
@@ -61,6 +61,7 @@ const truncateDescr = (description: string): string => {
   }
   .card:hover span {
     color: var(--main-color);
+    transition: all 0.3s ease-in-out;
   }
   .card-img-holder {
     width: 100%;
