@@ -12,9 +12,14 @@ const { class: className, id } = Astro.props;
 </section>
 
 <style>
-  @media (650px>=width) {
+  @media (width<=830px) {
     .section {
       max-width: 90vw;
+    }
+  }
+  @media (650px>=width) {
+    .section {
+      max-width: 95vw;
     }
   }
 </style>

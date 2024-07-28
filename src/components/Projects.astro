@@ -71,7 +71,7 @@ const PROJECTS = [
     link: "https://astral-ui.vercel.app/",
     github: "https://github.com/FrankmDev/astral-ui",
     image: "/AstralUI.avif",
-    tags: [TAGS.ASTRO, TAGS.VUE, TAGS.TYPESCRIPT, TAGS.TAILWIND],
+    tags: [TAGS.ASTRO, TAGS.TYPESCRIPT, TAGS.TAILWIND],
   },
   {
     title: "NIMBUS | Fitness Blog",
@@ -85,7 +85,9 @@ const PROJECTS = [
 ];
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-16 mt-6">
+<div
+  class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-16 mt-6 max-sm:text-center"
+>
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
       <article class="flex flex-col space-x-0 space-y-8 group ">
@@ -104,7 +106,7 @@ const PROJECTS = [
         <div class="w-full ">
           <h3 class="text-2xl font-bold ">{title}</h3>
           <div class="flex flex-wrap mt-2">
-            <ul class="flex flex-row mb-2 gap-x-2">
+            <ul class="flex flex-row mb-2 gap-x-2 max-sm:mx-auto">
               {tags.map((tag) => (
                 <li>
                   <span
@@ -122,7 +124,7 @@ const PROJECTS = [
             </ul>
 
             <div class="mt-2 text-gray-500">{description}</div>
-            <footer class="flex items-end justify-start mt-4 gap-x-4">
+            <footer class="flex items-end justify-start mt-4 gap-x-4 max-sm:mx-auto ">
               {github && <GithubBtn href={github} />}
               <LinkBtn href={link}>Visit</LinkBtn>
             </footer>
