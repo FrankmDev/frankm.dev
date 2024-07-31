@@ -48,21 +48,21 @@ const TAGS = {
 const PROJECTS = [
   {
     title: "Bufete Riazzo",
-    description:
-      "Freelance | Landing Page para Julio Riazzo y Asociados | Abogados.",
+    description: "Landing Page para Julio Riazzo y Asociados | Abogados.",
     link: "https://www.bufeteriazzo.com/",
     github: "https://github.com/FrankmDev/riazzo",
     image: "/RiazzoAbogados.avif",
     tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.REACT],
+    freelance: true,
   },
   {
     title: "Urban Loft",
-    description:
-      "Freelance | Landing Page para un piso turístico en Córdoba, Urban Loft.",
+    description: "Landing Page para un piso turístico en Córdoba, Urban Loft.",
     link: "https://urban-loft.vercel.app/",
     github: "https://github.com/FrankmDev/urban-loft",
     image: "/UrbanLoft.avif",
     tags: [TAGS.ASTRO, TAGS.TAILWIND],
+    freelance: true,
   },
   {
     title: "Astral UI | En desarrollo",
@@ -72,6 +72,7 @@ const PROJECTS = [
     github: "https://github.com/FrankmDev/astral-ui",
     image: "/AstralUI.avif",
     tags: [TAGS.ASTRO, TAGS.TYPESCRIPT, TAGS.TAILWIND],
+    freelance: false,
   },
   {
     title: "NIMBUS | Fitness Blog",
@@ -81,6 +82,7 @@ const PROJECTS = [
     github: "https://github.com/FrankmDev/nimbus",
     image: "/Nimbus.avif",
     tags: [TAGS.ASTRO, TAGS.TAILWIND],
+    freelance: false,
   },
 ];
 ---
@@ -89,48 +91,83 @@ const PROJECTS = [
   class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-16 mt-6 max-sm:text-center"
 >
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
-      <article class="flex flex-col space-x-0 space-y-8 group ">
-        <div class="w-full">
-          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-3xl group-hover:-translate-y-1 group-hover:shadow-2xl hover:border-gray-800">
-            <a href={link} target="_blank">
-              <img
-                alt="Project Image"
-                class="rounded-3xl object-cover object-top w-full h-56 transition duration-500 group-hover:scale-105"
-                src={image}
-              />
-            </a>
+    PROJECTS.map(
+      ({ image, title, description, tags, link, github, freelance }) => (
+        <article class="flex flex-col space-x-0 space-y-8 group ">
+          <div class="w-full relative">
+            <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-3xl group-hover:-translate-y-1 group-hover:shadow-2xl hover:border-gray-800">
+              <a href={link} target="_blank">
+                <img
+                  alt="Project Image"
+                  class="rounded-3xl object-cover object-top w-full h-56 transition duration-500 group-hover:scale-105"
+                  src={image}
+                />
+              </a>
+            </div>
+            {freelance && <div class="ribbon">Freelance</div>}
           </div>
-        </div>
 
-        <div class="w-full ">
-          <h3 class="text-2xl font-bold ">{title}</h3>
-          <div class="flex flex-wrap mt-2">
-            <ul class="flex flex-row mb-2 gap-x-2 max-sm:mx-auto">
-              {tags.map((tag) => (
-                <li>
-                  <span
-                    class={`flex gap-x-2 rounded-full text-xs  ${tag.class} py-1 px-2 `}
-                  >
-                    <img
-                      src={tag.icon}
-                      alt="Logo"
-                      class="size-4 object-contain"
-                    />
-                    {tag.name}
-                  </span>
-                </li>
-              ))}
-            </ul>
+          <div class="w-full ">
+            <h3 class="text-2xl font-bold ">{title}</h3>
+            <div class="flex flex-wrap mt-2">
+              <ul class="flex flex-row mb-2 gap-x-2 max-sm:mx-auto">
+                {tags.map((tag) => (
+                  <li>
+                    <span
+                      class={`flex gap-x-2 rounded-full text-xs  ${tag.class} py-1 px-2 `}
+                    >
+                      <img
+                        src={tag.icon}
+                        alt="Logo"
+                        class="size-4 object-contain"
+                      />
+                      {tag.name}
+                    </span>
+                  </li>
+                ))}
+              </ul>
 
-            <div class="mt-2 text-gray-500">{description}</div>
-            <footer class="flex items-end justify-start mt-4 gap-x-4 max-sm:mx-auto ">
-              {github && <GithubBtn href={github} />}
-              <LinkBtn href={link}>Visit</LinkBtn>
-            </footer>
+              <div class="mt-2 text-gray-500">{description}</div>
+              <footer class="flex items-end justify-start mt-4 gap-x-4 max-sm:mx-auto ">
+                {github && <GithubBtn href={github} />}
+                <LinkBtn href={link}>Visit</LinkBtn>
+              </footer>
+            </div>
           </div>
-        </div>
-      </article>
-    ))
+        </article>
+      ),
+    )
   }
 </div>
+<style>
+  /* HTML: <div class="ribbon">Your text content</div> */
+  .ribbon {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .ribbon {
+    --f: 0.5em; /* control the folded part */
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 1.8;
+    padding-inline: 1lh;
+    padding-bottom: var(--f);
+    border-image: conic-gradient(#0008 0 0) 51% / var(--f);
+    clip-path: polygon(
+      100% calc(100% - var(--f)),
+      100% 100%,
+      calc(100% - var(--f)) calc(100% - var(--f)),
+      var(--f) calc(100% - var(--f)),
+      0 100%,
+      0 calc(100% - var(--f)),
+      999px calc(100% - var(--f) - 999px),
+      calc(100% - 999px) calc(100% - var(--f) - 999px)
+    );
+    transform: translate(calc((1 - cos(45deg)) * 100%), -100%) rotate(45deg);
+    transform-origin: 0% 100%;
+    background-color: var(--main-color); /* the main color  */
+  }
+</style>
