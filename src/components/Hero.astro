@@ -2,20 +2,20 @@
 import CVBtn from "./CVBtn.astro";
 import ParticlesBG from "./ParticlesBG.jsx";
 import { Image } from "astro:assets";
-import HeroImg from "/public/Hero-Img.webp";
+import HeroImg from "/public/Hero-Img.avif";
 ---
 
-<section id="hero" class="mb-10">
-  <div class="flex items-center justify-center">
+<section id="hero" class="mb-10 w-full">
+  <div class="flex items-center justify-center mb-4">
     <Image
       src={HeroImg}
       alt="Hero Image"
-      width="265"
+      width="250"
       class="hero-img"
       loading="lazy"
     />
   </div>
-  <h1 class="text-5xl text-center animate-slide-up mb-6">
+  <h1 class="text-5xl text-center animate-slide-up mb-4">
     Hey, soy <span class="text-main text-6xl font-black">Frank</span>!
   </h1>
   <div class="flex items-center justify-center">
