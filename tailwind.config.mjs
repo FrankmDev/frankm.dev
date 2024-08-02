@@ -5,9 +5,12 @@ export default {
     extend: {
       colors: {
         main: "#542ba4",
-        secondary: '#F0D698',
+        secondary: "#F0D698",
       },
     },
   },
-  plugins: [],
+  plugins: {
+    "postcss-import": {},
+    "tailwindcss/nesting": "postcss-nesting",
+  },
 };
