@@ -25,6 +25,7 @@ export default function ParticlesBG() {
             zIndex: 1,
           }}
           options={{
+            fullScreen: { enable: false },
             autoPlay: true,
             background: {
               color: {
