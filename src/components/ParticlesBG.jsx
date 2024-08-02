@@ -5,7 +5,6 @@ import { loadFull } from "tsparticles";
 export default function ParticlesBG() {
   const [init, setInit] = useState(false);
   useEffect(() => {
-    console.log("init");
     initParticlesEngine(async (engine) => {
       await loadFull(engine);
     }).then(() => {
@@ -25,11 +24,10 @@ export default function ParticlesBG() {
             zIndex: 1,
           }}
           options={{
-            fullScreen: { enable: false },
             autoPlay: true,
             background: {
               color: {
-                value: "#101010",
+                value: "#121212",
               },
               image: "",
               position: "50% 50%",
