@@ -1,8 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
-
 :root {
   --main-color: #542ca5;
   --secondary-color: #F0D698;
+}
+
+@font-face {
+  font-family: "Onest";
+  src: url("/public/Onest.woff2") format("woff2");
+  font-weight: 100 900;
 }
 
 * {
@@ -17,7 +21,7 @@ html {
   color: #f9f9f9;
   font-size: 1.2rem;
   scroll-behavior: smooth;
-  background-color: #121212;
+  background-color: #101010;
   overflow-x: hidden;
 }
 

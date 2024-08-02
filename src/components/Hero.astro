@@ -1,15 +1,17 @@
 ---
 import CVBtn from "./CVBtn.astro";
 import ParticlesBG from "./ParticlesBG.jsx";
+import { Image } from "astro:assets";
+import HeroImg from "/public/Hero-Img.webp";
 ---
 
 <div class="relative z-10">
-  <img
-    src="/Hero-Img.webp"
+  <Image
+    src={HeroImg}
     alt="Hero Image"
     width="250"
-    height="auto"
     class="hero-img"
+    loading="lazy"
   />
 </div>
 <h1 class="text-5xl text-center animate-slide-up mb-4">
