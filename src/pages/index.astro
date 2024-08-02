@@ -9,35 +9,15 @@ import AboutIcon from "../components/icons/AboutIcon.astro";
 import SkillsIcon from "../components/icons/SkillsIcon.astro";
 import ProjectsIcon from "../components/icons/ProjectsIcon.astro";
 import BlogIcon from "../components/icons/BlogIcon.astro";
-import CVBtn from "../components/CVBtn.astro";
 import Socials from "../components/Socials.astro";
 import Blog from "../components/Blog.astro";
 import Freelance from "../components/Freelance.astro";
 import FreelanceIcon from "../components/icons/FreelanceIcon.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <Layout title="Frank.dev">
-  <div>
-    <img
-      src="/Hero-Img.webp"
-      alt="Hero Image"
-      width="250"
-      height="auto"
-      class="hero-img"
-    />
-  </div>
-  <h1 class="text-5xl text-center animate-slide-up mb-4">
-    Hey, soy <span class="text-main text-6xl font-black">Frank</span>!
-  </h1>
-  <div class="flex items-center justify-center">
-    <article>
-      <span
-        class="span bg-white text-main text-xl rounded-3xl py-1 px-3 m-3 font-black animate-slide-up max-sm:text-sm"
-        >Frontend Developer</span
-      >
-    </article>
-    <CVBtn />
-  </div>
+  <Hero client:load />
   <Section id="about">
     <SectionHeader>
       <AboutIcon />
