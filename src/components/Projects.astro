@@ -127,7 +127,7 @@ const PROJECTS = [
                 ))}
               </ul>
 
-              <div class="mt-2 text-gray-500">{description}</div>
+              <div class="mt-2 text-gray-300 text-pretty">{description}</div>
               <footer class="flex items-end justify-start mt-4 gap-x-4 max-sm:mx-auto ">
                 {github && <GithubBtn href={github} />}
                 <LinkBtn href={link}>Visit</LinkBtn>
@@ -140,14 +140,13 @@ const PROJECTS = [
   }
 </div>
 <style>
-  /* HTML: <div class="ribbon">Your text content</div> */
   .ribbon {
     font-size: 16px;
     font-weight: bold;
     color: #fff;
   }
   .ribbon {
-    --f: 0.5em; /* control the folded part */
+    --f: 0.5em;
 
     position: absolute;
     top: 0;
