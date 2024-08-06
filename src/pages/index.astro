@@ -23,25 +23,32 @@ import Hero from "../components/Hero.astro";
       <AboutIcon />
       <HeadingSecondary text="¿Quién soy?" />
     </SectionHeader>
-    <p class="leading-7">
-      Mi nombre es Francisco Muñoz, desarrollador web freelance. Actualmente
-      cursando el Grado Superior de Desarrollo de Aplicaciones Web, además de
-      formarme continuamente mediante cursos certificados.<br />
-      Descubrí la programación estudiando la carrera de Ingeniería Electrónica Industrial,
-      pero decidí emprender mi camino hacia el desarrollo.
-      <br />
-      También me dedico a crear contenido relacionado con la programación, para hacer
-      mas ameno el camino a los que inician.
-    </p>
+    <article>
+      <p>
+        Mi nombre es Francisco Muñoz, desarrollador web freelance. Actualmente
+        cursando el Grado Superior de Desarrollo de Aplicaciones Web, además de
+        formarme continuamente mediante cursos certificados.
+      </p>
+      <p>
+        Descubrí la programación estudiando la carrera de Ingeniería Electrónica
+        Industrial, pero decidí emprender mi camino hacia el desarrollo.
+      </p>
+      <p>
+        También me dedico a crear contenido relacionado con la programación,
+        para hacer mas ameno el camino a los que inician.
+      </p>
+    </article>
+
     <Socials />
   </Section>
-  <Section id="freelance">
+  <Section id="projects">
     <SectionHeader>
-      <FreelanceIcon />
-      <HeadingSecondary text="¿Necesitas una web?" />
+      <ProjectsIcon />
+      <HeadingSecondary text="Proyectos" />
     </SectionHeader>
-    <Freelance />
+    <Projects />
   </Section>
+
   <Section id="skills">
     <SectionHeader>
       <SkillsIcon />
@@ -76,13 +83,14 @@ import Hero from "../components/Hero.astro";
       </div>
     </section>
   </Section>
-  <Section id="projects">
+  <Section id="freelance">
     <SectionHeader>
-      <ProjectsIcon />
-      <HeadingSecondary text="Proyectos" />
+      <FreelanceIcon />
+      <HeadingSecondary text="¿Necesitas una web?" />
     </SectionHeader>
-    <Projects />
+    <Freelance />
   </Section>
+
   <Section id="blog">
     <SectionHeader>
       <BlogIcon />
@@ -92,6 +100,9 @@ import Hero from "../components/Hero.astro";
   </Section>
 </Layout>
 <style is:global>
+  p {
+    @apply leading-7 mb-3 text-pretty;
+  }
   @keyframes slide-up {
     0% {
       transform: translateY(100%);

@@ -7,13 +7,7 @@ import HeroImg from "/public/Hero-Img.avif";
 
 <section id="hero" class="mb-10 w-full">
   <div class="flex items-center justify-center mb-4">
-    <Image
-      src={HeroImg}
-      alt="Hero Image"
-      width="250"
-      class="hero-img"
-      loading="lazy"
-    />
+    <Image src={HeroImg} alt="Hero Image" width="250" class="hero-img" />
   </div>
   <h1 class="text-5xl text-center animate-slide-up mb-4">
     Hey, soy <span class="text-main text-6xl font-black">Frank</span>!
@@ -21,11 +15,12 @@ import HeroImg from "/public/Hero-Img.avif";
   <div class="flex items-center justify-center">
     <article>
       <span
-        class="span bg-[#f9f9f9] text-main text-xl rounded-3xl py-1 px-3 m-3 font-black animate-slide-up max-sm:text-sm"
+        class="span bg-[#fafafa] text-[#542ba4] text-xl rounded-xl py-1 px-3 m-3 font-black animate-slide-up max-sm:text-sm"
         >Frontend Developer</span
       >
     </article>
     <CVBtn />
+
     <ParticlesBG client:load />
   </div>
 </section>

@@ -4,17 +4,19 @@
 
 <a href="/CV.pdf" target="_blank">
   <div
-    class="download-btn text-center rounded-3xl relative w-24 h-9 bg-main animate-slide-up cursor-pointer"
+    class="download-btn text-center rounded-3xl relative w-24 h-9 bg-[var(--main-color)] animate-slide-up cursor-pointer"
   >
     <div class="button-wrapper">
-      <div class="text flex items-center justify-center top-0 text-xl">CV</div>
+      <span class="text flex items-center justify-center top-0 text-xl">
+        CV
+      </span>
       <span class="icon text-white flex items-center justify-center top-full">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           width="32"
           height="32"
-          color="#542ca5"
+          color="var(--main-color)"
           fill="none"
         >
           <path
@@ -58,7 +60,7 @@
 
   .download-btn:hover {
     background: transparent;
-    border: 2px solid var(--main-color);
+    border: 2px solid #542ba4;
   }
 
   .download-btn:hover .text {
