@@ -4,6 +4,7 @@ import LinkedInIcon from "./icons/LinkedInIcon.astro";
 import MailIcon from "./icons/MailIcon.astro";
 import InstagramIcon from "./icons/InstagramIcon.astro";
 import XIcon from "./icons/XIcon.astro";
+import ThreadsIcon from "./icons/ThreadsIcon.astro";
 ---
 
 <div class="container flex gap-4 items-center my-4">
@@ -20,14 +21,19 @@ import XIcon from "./icons/XIcon.astro";
     </div>
     <div class="text">LinkedIn</div>
   </a>
-
-  <a href="" class="Btn">
+  <a href="https://www.threads.net/@frankm.dev" class="Btn">
+    <div class="sign">
+      <ThreadsIcon />
+    </div>
+    <div class="text">Threads</div>
+  </a>
+  <a href="https://x.com/FrankmDev" class="Btn">
     <div class="sign">
       <XIcon />
     </div>
     <div class="text">Twitter</div>
   </a>
-  <a href="" class="Btn">
+  <a href="https://www.instagram.com/frankm.dev/" class="Btn">
     <div class="sign">
       <InstagramIcon />
     </div>
@@ -110,8 +116,8 @@ import XIcon from "./icons/XIcon.astro";
       gap: 0.5rem;
     }
     .Btn {
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
     }
   }
 </style>
