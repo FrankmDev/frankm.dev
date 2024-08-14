@@ -1,54 +1,70 @@
-# Astro Starter Kit: Basics
+# 💼 Mi Portfolio Personal
 
-```sh
-npm create astro@latest -- --template basics
-```
+¡Bienvenido a mi portfolio personal! Aquí podrás encontrar información sobre mis proyectos, stack tecnológico, blog, servicios freelance y una selección de recursos útiles para el desarrollo web, los cuales he estado utilizando a lo largo de mi desarrollo.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🖥️ Tecnologías Utilizadas
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- **Astro**
+- **Tailwind**
+- **React**
+- **Markdown**
+- **Vercel**
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 🚀 Secciones del Portfolio
 
-## 🚀 Project Structure
+### Proyectos
 
-Inside of your Astro project, you'll see the following folders and files:
+En esta sección, muestro algunos de los proyectos en los que he trabajado, incluyendo proyectos personales y proyectos realizados como freelance. Cada proyecto incluye una breve descripción, tecnologías utilizadas y un enlace a GitHub para ver el código.
 
-```text
-/
-├── public/
-│   └── favicon.svg
+### Stack
+
+Aquí muestro el conjunto de tecnologías que utilizo en mi trabajo diario como desarrollador frontend, incluyendo Astro, React, JavaScript...
+
+### Freelance
+
+Muestro las características de mi trabajo como freelance, destacando la seguridad, rendimiento o accesibilidad de mis proyectos.
+
+### Blog
+
+Comparto breves artículos sobre desarrollo web, como métodos de arrays en JavaScript o el roadmap que he seguido para convertirte en desarrollador frontend.
+
+
+**Servicios Ofrecidos:**
+- Desarrollo de landing pages, portfolios o e-commerce.
+- Optimización web, rendimiento, SEO o buenas prácticas.
+- Adaptación de diseños a código.
+  
+Para cualquier consulta, puedes contactarme directamente por cualquiera de mis redes sociales.
+
+### Recursos
+
+En esta sección, comparto una recopilación de herramientas y recursos que utilizo en mi trabajo diario, como imágenes, fuentes, iconos o páginas donde buscar inspiración para mis diseños.
+
+## 📂 Estructura del Proyecto
+
+```bash
+/.
+├── public/                 # Archivos estáticos
 ├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/         # Componentes reutilizables
+│   ├── layouts/            # Layout principal
+│   ├── pages/              # Páginas del proyecto
+│   ├── styles/             # Estilos globales y configuración de Tailwind
+│
+├── astro.config.mjs        # Configuración de Astro
+├── tailwind.config.js      # Configuración de Tailwind CSS
+└── package.json            # Dependencias y scripts del proyecto
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 📧 Contacto
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Si tienes alguna pregunta, sugerencia, o quieres colaborar en algún proyecto, no dudes en ponerte en contacto conmigo.
 
-Any static assets, like images, can be placed in the `public/` directory.
+- **Email**: [frankmmarindev@gmail.com](mailto:frankmmarindev@gmail.com)
+- **LinkedIn**: [frankmdev](https://www.linkedin.com/in/frankmdev/)
+- **Threads**: [@frankmdev](https://www.threads.net/@frankm.dev)
+- **X/Twitter**: [@frankmdev](https://x.com/FrankmDev)
+  
+## 🌟 Contribuciones
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Aunque este es un portfolio personal, las sugerencias y mejoras son bienvenidas. Si encuentras algún problema o tienes una idea para mejorar, siéntete libre de abrir un issue o un pull request.
