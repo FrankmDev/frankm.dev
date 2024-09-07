@@ -1,10 +1,10 @@
 ---
 interface Props {
   title: string;
-  teacher?: string;
+  teacher: string;
   link: string;
   school: string;
-  certificate: string;
+  certificate?: string;
 }
 
 const CERTIFICATES: Props[] = [
@@ -78,4 +78,24 @@ const CERTIFICATES: Props[] = [
 ];
 ---
 
-<section></section>
+<section>
+  <div class="grid grid-cols-3 mx-auto gap-4">
+    {
+      CERTIFICATES.map(({ title, teacher, school, link, certificate }) => (
+        <div class="text-center">
+          <a href={link} target="_blank">
+            <div class="bg-transparent px-4 py-2 flex flex-col gap-y-2">
+              <h4>{title}</h4>
+              <h5 class="text-sm text-gray-300">{teacher}</h5>
+            </div>
+          </a>
+          {certificate && (
+            <button href={certificate} target="_blank">
+              Certificado
+            </button>
+          )}
+        </div>
+      ))
+    }
+  </div>
+</section>
