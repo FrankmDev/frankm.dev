@@ -8,6 +8,7 @@ import Projects from "../components/Projects.astro";
 import AboutIcon from "../components/icons/AboutIcon.astro";
 import SkillsIcon from "../components/icons/SkillsIcon.astro";
 import ProjectsIcon from "../components/icons/ProjectsIcon.astro";
+import CertificationsIcon from "../components/icons/CertificationsIcon.astro";
 import BlogIcon from "../components/icons/BlogIcon.astro";
 import Socials from "../components/Socials.astro";
 import Blog from "../components/Blog.astro";
@@ -15,6 +16,7 @@ import Freelance from "../components/Freelance.astro";
 import FreelanceIcon from "../components/icons/FreelanceIcon.astro";
 import Hero from "../components/Hero.astro";
 import NextjsIcon from "../components/icons/NextjsIcon.astro";
+import Certifications from "../components/Certifications.astro";
 ---
 
 <Layout title="Frank.dev">
@@ -92,6 +94,13 @@ import NextjsIcon from "../components/icons/NextjsIcon.astro";
     <Freelance />
   </Section>
 
+  <Section id="certifications">
+    <SectionHeader>
+      <CertificationsIcon />
+      <HeadingSecondary text="Certificaciones" />
+    </SectionHeader>
+    <Certifications />
+  </Section>
   <Section id="blog">
     <SectionHeader>
       <BlogIcon />
