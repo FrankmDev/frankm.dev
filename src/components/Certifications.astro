@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import RightIcon from "./icons/RightIcon.astro";
 import LeftIcon from "./icons/LeftIcon.astro";
 
@@ -161,10 +160,12 @@ const CERTIFICATES: Props[] = [
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    background-color: #4a5568;
+    background-color: transparent;
     color: white;
     border-radius: 4px;
     text-decoration: none;
+    border-radius: 24px;
+    border: 2px solid #542ca5;
   }
 
   .carousel-control {
@@ -173,8 +174,8 @@ const CERTIFICATES: Props[] = [
     transform: translateY(-50%);
     border-radius: 100%;
     background: transparent;
-    color: white;
     border: 1px solid var(--main-color);
+    color: white;
     font-size: 1.5rem;
     padding: 0.2rem;
     cursor: pointer;
