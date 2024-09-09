@@ -94,30 +94,30 @@ const CERTIFICATES: Props[] = [
     {
       CERTIFICATES.map(
         ({ title, teacher, school, link, certificate }, index) => (
-          <div class="carousel-item opacity-30 transition-opacity duration-500 ease-in-out">
+          <div class="carousel-item opacity-30 transition-opacity duration-300 ease-in-out">
             <div class="card text-center ">
               <a href={link} target="_blank" rel="noopener noreferrer">
                 <div class="flex flex-col items-center gap-6 card-content">
-                  <h4>{title}</h4>
-                  <h5>{teacher}</h5>
+                  <h4 class="text-xl max-sm:text-md">{title}</h4>
+                  <h5 class="text-sm text-gray-200">{teacher}</h5>
                   <figure class="flex items-center justify-center">
                     {school === "FreeCodeCamp" ? (
                       <img
                         src={Freecodecamp.src}
                         alt="Freecodecamp"
-                        class="w-12 h-12 rounded-full"
+                        class="w-10 h-10 rounded-full"
                       />
                     ) : school === "Udemy" ? (
                       <img
                         src={Udemy.src}
                         alt="Udemy"
-                        class="w-12 h-12 rounded-full"
+                        class="w-10 h-10 rounded-full"
                       />
                     ) : (
                       <img
                         src={Coursera.src}
                         alt="Coursera"
-                        class="w-12 h-12 rounded-full"
+                        class="w-10 h-10 rounded-full"
                       />
                     )}
                   </figure>
@@ -211,10 +211,8 @@ const CERTIFICATES: Props[] = [
   prevBtn.addEventListener("click", () => moveCarousel(-1));
   nextBtn.addEventListener("click", () => moveCarousel(1));
 
-  // Inicializar el carrusel
   updateCarousel();
 
-  // Opcional: Añadir navegación con teclado
   document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowLeft") moveCarousel(-1);
     if (e.key === "ArrowRight") moveCarousel(1);
