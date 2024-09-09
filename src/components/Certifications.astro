@@ -1,4 +1,5 @@
 ---
+import NextjsIcon from "./icons/NextjsIcon.astro";
 import RightIcon from "./icons/RightIcon.astro";
 import LeftIcon from "./icons/LeftIcon.astro";
 
@@ -6,12 +7,23 @@ import Freecodecamp from "/public/Resources/Freecodecamp.avif";
 import Udemy from "/public/Resources/Udemy.avif";
 import Coursera from "/public/Resources/Coursera.avif";
 
+const TAGS = {
+  HTML: { name: "HTML", icon: "/Logos/HTML.webp" },
+  CSS: { name: "CSS", icon: "/Logos/CSS.webp" },
+  JAVASCRIPT: { name: "JavaScript", icon: "/Logos/Javascript.webp" },
+  REACT: { name: "React", icon: "/Logos/React.webp" },
+  NEXTJS: { name: "Next.js", icon: "/Logos/Nextjs.webp" },
+  FIGMA: { name: "Figma", icon: "/Logos/Figma.webp" },
+  ADOBE: { name: "Adobe", icon: "/Logos/Adobe.webp" },
+};
+
 interface Props {
   title: string;
   teacher: string;
   link: string;
   school: string;
   certificate?: string;
+  tags?: { name: string; class: string; icon: string }[];
 }
 
 const CERTIFICATES: Props[] = [
@@ -19,6 +31,7 @@ const CERTIFICATES: Props[] = [
     title: "The Complete JavaScript Course 2023: From Zero to Hero",
     teacher: "Jonas Schmedtmann",
     school: "Udemy",
+    tags: [TAGS.JAVASCRIPT],
     link: "https://www.udemy.com/course/the-complete-javascript-course/?couponCode=ACCAGE0923",
     certificate:
       "https://www.udemy.com/certificate/UC-a1c863fa-621c-4167-9b61-7783c0f432df/",
@@ -27,6 +40,7 @@ const CERTIFICATES: Props[] = [
     title: "JavaScript Algorithms and Data Structures",
     teacher: "FreeCodeCamp",
     school: "FreeCodeCamp",
+    tags: [TAGS.JAVASCRIPT],
     link: "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/",
     certificate:
       "https://www.freecodecamp.org/certification/Draenon/javascript-algorithms-and-data-structures",
@@ -35,6 +49,7 @@ const CERTIFICATES: Props[] = [
     title: "Build Responsive Real-World Websites with HTML and CSS",
     teacher: "Jonas Schmedtmann",
     school: "Udemy",
+    tags: [TAGS.HTML, TAGS.CSS],
     link: "https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/?couponCode=ACCAGE0923",
     certificate:
       "https://www.udemy.com/certificate/UC-c0cf1136-2375-4f04-a63f-c46490e10fc5/",
@@ -43,6 +58,7 @@ const CERTIFICATES: Props[] = [
     title: "Responsive Web Design",
     teacher: "FreeCodeCamp",
     school: "FreeCodeCamp",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
     link: "https://www.freecodecamp.org/learn/2022/responsive-web-design/",
     certificate:
       "https://www.freecodecamp.org/certification/Draenon/responsive-web-design",
@@ -51,6 +67,7 @@ const CERTIFICATES: Props[] = [
     title: "The Complete 2024 Web Develpment Bootcamp",
     teacher: "Angela Yu",
     school: "Udemy",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.REACT],
     link: "https://www.udemy.com/course/the-complete-web-development-bootcamp/?couponCode=ACCAGE0923",
     certificate: "",
   },
@@ -58,6 +75,7 @@ const CERTIFICATES: Props[] = [
     title: "Next.js: El framework de React para producción",
     teacher: "Fernando Herrera",
     school: "Udemy",
+    tags: [TAGS.REACT, TAGS.NEXTJS],
     link: "https://www.udemy.com/course/nextjs-fh/",
     certificate: "",
   },
@@ -65,6 +83,7 @@ const CERTIFICATES: Props[] = [
     title: "React - The Complete Guide 2024 (incl. Next.js, Redux)",
     teacher: "Maximilian Schwarzmüller",
     school: "Udemy",
+    tags: [TAGS.REACT, TAGS.NEXTJS],
     link: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=ACCAGE0923",
     certificate: "",
   },
@@ -72,6 +91,7 @@ const CERTIFICATES: Props[] = [
     title: "Advanced CSS and Sass: Flexbox, Grid, Animations and More!",
     teacher: "Jonas Schmedtmann",
     school: "Udemy",
+    tags: [TAGS.CSS],
     link: "https://www.udemy.com/course/advanced-css-and-sass/?couponCode=ACCAGE0923",
     certificate: "",
   },
@@ -79,6 +99,7 @@ const CERTIFICATES: Props[] = [
     title: "UX Design by Google",
     teacher: "Google",
     school: "Coursera",
+    tags: [TAGS.FIGMA, TAGS.ADOBE],
     link: "https://www.coursera.org/professional-certificates/diseno-de-experiencia-del-usuario-ux-de-google",
     certificate: "",
   },
@@ -93,11 +114,26 @@ const CERTIFICATES: Props[] = [
   >
     {
       CERTIFICATES.map(
-        ({ title, teacher, school, link, certificate }, index) => (
+        ({ title, teacher, school, link, certificate, tags }, index) => (
           <div class="carousel-item opacity-30 transition-opacity duration-300 ease-in-out">
-            <div class="card text-center ">
+            <div class="card text-center">
               <a href={link} target="_blank" rel="noopener noreferrer">
                 <div class="flex flex-col items-center gap-6 card-content">
+                  {tags && (
+                    <figure class="flex items-center justify-center">
+                      {tags.map((tag) => (
+                        <span
+                          class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                        >
+                          {tag === TAGS.NEXTJS ? (
+                            <NextjsIcon class="w-8 h-8" />
+                          ) : (
+                            <img src={tag.icon} alt="Logo" class="w-8 h-8" />
+                          )}
+                        </span>
+                      ))}
+                    </figure>
+                  )}
                   <h4 class="text-xl max-sm:text-md">{title}</h4>
                   <h5 class="text-sm text-gray-200">{teacher}</h5>
                   <figure class="flex items-center justify-center">
