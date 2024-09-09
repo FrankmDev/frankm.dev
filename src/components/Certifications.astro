@@ -1,4 +1,12 @@
 ---
+import { Image } from "astro:assets";
+import RightIcon from "./icons/RightIcon.astro";
+import LeftIcon from "./icons/LeftIcon.astro";
+
+import Freecodecamp from "/public/Resources/Freecodecamp.avif";
+import Udemy from "/public/Resources/Udemy.avif";
+import Coursera from "/public/Resources/Coursera.avif";
+
 interface Props {
   title: string;
   teacher: string;
@@ -78,24 +86,136 @@ const CERTIFICATES: Props[] = [
 ];
 ---
 
-<section>
-  <div class="grid grid-cols-3 mx-auto gap-4">
+<section
+  class="carousel-container relative w-full max-w-[700px] my-0 mx-auto overflow-hidden mt-10"
+>
+  <div
+    class="carousel flex transition-transform transform duration-500 ease-in-out"
+  >
     {
-      CERTIFICATES.map(({ title, teacher, school, link, certificate }) => (
-        <div class="text-center">
-          <a href={link} target="_blank">
-            <div class="bg-transparent px-4 py-2 flex flex-col gap-y-2">
-              <h4>{title}</h4>
-              <h5 class="text-sm text-gray-300">{teacher}</h5>
+      CERTIFICATES.map(
+        ({ title, teacher, school, link, certificate }, index) => (
+          <div class="carousel-item opacity-30 transition-opacity duration-500 ease-in-out">
+            <div class="card text-center ">
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                <div class="flex flex-col items-center gap-6 card-content">
+                  <h4>{title}</h4>
+                  <h5>{teacher}</h5>
+                  <figure class="flex items-center justify-center">
+                    {school === "FreeCodeCamp" ? (
+                      <img
+                        src={Freecodecamp.src}
+                        alt="Freecodecamp"
+                        class="w-12 h-12 rounded-full"
+                      />
+                    ) : school === "Udemy" ? (
+                      <img
+                        src={Udemy.src}
+                        alt="Udemy"
+                        class="w-12 h-12 rounded-full"
+                      />
+                    ) : (
+                      <img
+                        src={Coursera.src}
+                        alt="Coursera"
+                        class="w-12 h-12 rounded-full"
+                      />
+                    )}
+                  </figure>
+                </div>
+              </a>
+              {certificate && (
+                <a
+                  href={certificate}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="certificate-button"
+                >
+                  Certificado
+                </a>
+              )}
             </div>
-          </a>
-          {certificate && (
-            <button href={certificate} target="_blank">
-              Certificado
-            </button>
-          )}
-        </div>
-      ))
+          </div>
+        ),
+      )
     }
   </div>
+  <button class="carousel-control prev" aria-label="Anterior"
+    ><LeftIcon /></button
+  >
+  <button class="carousel-control next" aria-label="Siguiente"
+    ><RightIcon /></button
+  >
 </section>
+
+<style>
+  .carousel-item {
+    flex: 0 0 100%;
+  }
+
+  .carousel-item.active {
+    opacity: 1;
+  }
+
+  .certificate-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #4a5568;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 100%;
+    background: transparent;
+    color: white;
+    border: 1px solid var(--main-color);
+    font-size: 1.5rem;
+    padding: 0.2rem;
+    cursor: pointer;
+  }
+
+  .prev {
+    left: 0;
+  }
+  .next {
+    right: 0;
+  }
+</style>
+
+<script>
+  const carousel = document.querySelector(".carousel");
+  const items = carousel.querySelectorAll(".carousel-item");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    items.forEach((item, index) => {
+      item.classList.toggle("active", index === currentIndex);
+    });
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  function moveCarousel(direction) {
+    currentIndex = (currentIndex + direction + items.length) % items.length;
+    updateCarousel();
+  }
+
+  prevBtn.addEventListener("click", () => moveCarousel(-1));
+  nextBtn.addEventListener("click", () => moveCarousel(1));
+
+  // Inicializar el carrusel
+  updateCarousel();
+
+  // Opcional: Añadir navegación con teclado
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") moveCarousel(-1);
+    if (e.key === "ArrowRight") moveCarousel(1);
+  });
+</script>
